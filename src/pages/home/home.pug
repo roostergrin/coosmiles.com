@@ -1,6 +1,9 @@
 .pages-home
   HeroHome
   BlockIntroHome
-    
   div(v-if='props')
+    CustomHomeSection(:props='props')
+    CustomHomeReviews(:props='props')
+    CustomHomeSmiles(:props='props')
+    CustomHomeFinancing(:props='props')
     pre {{ props }}

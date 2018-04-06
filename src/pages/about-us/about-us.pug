@@ -1,4 +1,7 @@
 .page-about-us
   Loader(v-if='loading')
-  div(v-if='!loading')
-    h1 About Us Page
+  div(v-if='!props')
+    HeroPages(:props='props')
+    TabsAboutDoctor(:props='props')
+    TabsAboutTeam(:props='props')
+    TabsAboutOffice(:props='props')
