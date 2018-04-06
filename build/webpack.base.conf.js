@@ -30,7 +30,8 @@ module.exports = {
       components: resolve('/src/components'),
       directives: resolve('./src/shared/directives'),
       templates: resolve('./src/shared/templates'),
-      svg: resolve('/src/assets/svg')
+      svg: resolve('/src/assets/svg'),
+      '&': resolve('/static')
     }
   },
   module: {

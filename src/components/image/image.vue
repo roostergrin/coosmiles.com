@@ -7,6 +7,9 @@ export default {
     image () {
       return require(`@/assets/images/${this.name}.jpg`)
     }
+  },
+  created () {
+    console.log(this.image)
   }
 }
 </script>

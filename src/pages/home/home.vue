@@ -2,6 +2,8 @@
 
 <script>
 import Loader from 'components/loader/loader'
+import HeroHome from 'components/hero/hero-home/hero-home'
+import BlockIntroHome from 'components/block/block-intro-home/block-intro-home'
 
 export default {
   name: 'home',
@@ -14,7 +16,9 @@ export default {
     }
   },
   components: {
-    Loader
+    Loader,
+    HeroHome,
+    BlockIntroHome
   }
 }
 </script>
