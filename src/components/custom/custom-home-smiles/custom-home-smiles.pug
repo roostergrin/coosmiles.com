@@ -1,4 +1,7 @@
 .custom-home-smiles
   .custom-home-smiles__container
-    .custom-home-smiles__title
-      | Custom Home Smiles Component
+    .custom-home-smiles__title(v-html='props.title')
+      
+    .custom-home-smiles__slider
+      .custom-home-smiles__slide(v-for='slide in props.gallery')  
+        img(:src='slide.url')

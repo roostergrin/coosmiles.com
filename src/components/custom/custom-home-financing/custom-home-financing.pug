@@ -1,5 +1,11 @@
 .custom-home-financing
-  .custom-home-financing__bg
+  .custom-home-financing__bg(:style="{ backgroundImage: 'url('+ props.background +')' }")
     .custom-home-financing__container
-      .custom-home-financing__title
-        | Custom Home Financing Component
+      .custom-home-financing__title(v-html='props.title')
+      .custom-home-financing__body
+        .custom-home-financing__col.custom-home-financing__col--left
+          .custom-home-financing__circle(v-for='content in props.column_left')
+            .custom-home-financing__icon {{ content.icon }}
+            .custom-home-financing__content(v-html='content.content')
+        .custom-home-financing__col.custom-home-financing__col--right  
+          | Form

@@ -3,7 +3,8 @@
   BlockIntroHome
   div(v-if='props')
     CustomHomeSection(:props='props.acf.custom_home_section')
-    CustomHomeReviews(:props='props')
-    CustomHomeSmiles(:props='props')
-    CustomHomeFinancing(:props='props')
-    pre {{ props }}
+    CustomHomeReviews(:props='props.acf.custom_home_reviews')
+    CustomHomeSmiles(:props='props.acf.custom_home_smiles')
+    CustomHomeFinancing(:props='props.acf.custom_home_financing')
+
+ 
