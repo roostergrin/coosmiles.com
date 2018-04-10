@@ -8,12 +8,10 @@
     padding-bottom: rem-calc(90)
 
   &__title
-    @extend h1
-    text-transform: uppercase
-    color: $c5
+    @extend .title
 
     &--option
-      color: $c4
+      @extend .title--option
 
   &__content
     // @extend .inner-container

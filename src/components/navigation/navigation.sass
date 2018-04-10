@@ -4,3 +4,62 @@
   left: 0
   z-index: 9996
   width: 100%
+
+  &--scrolled
+    background-color: $c1
+
+  &__container
+    @extend .container-fluid
+
+  &__icon
+    display: inline-block
+    margin: rem-calc(8) auto
+    width: rem-calc(210)
+
+    .navigation--scrolled &
+      display: none
+
+    &--option
+      display: none
+
+      .navigation--scrolled &
+        display: inline-block
+
+  &__links
+    display: inline-block
+    position: absolute
+    top: 50%
+    right: 16px
+    transform: translateY(-50%)
+
+  &__link
+    @extend %p3
+    margin: auto rem-calc(8)
+    text-transform: uppercase
+    letter-spacing: 1px
+    color: $c1
+
+    .navigation--scrolled &
+      color: $c6
+
+    a
+      color: $c1
+
+      &:hover
+        color: $c3
+
+      .navigation--scrolled &
+        color: $c6
+
+        &:hover
+          color: $c3
+
+  &__button
+    @extend .button
+
+    .navigation--scrolled &
+      border: 1px solid $c6
+
+      &:hover
+        border: 1px solid $c4
+        color: $c4

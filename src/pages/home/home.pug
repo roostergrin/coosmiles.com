@@ -2,7 +2,7 @@
   HeroHome
   BlockIntroHome
   div(v-if='props')
-    CustomHomeSection(:props='props')
+    CustomHomeSection(:props='props.acf.custom_home_section')
     CustomHomeReviews(:props='props')
     CustomHomeSmiles(:props='props')
     CustomHomeFinancing(:props='props')
