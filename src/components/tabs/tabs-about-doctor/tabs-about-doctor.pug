@@ -1,4 +1,24 @@
 .tabs-about-doctor
   .tabs-about-doctor__bg
-    .tabs-about-doctor__title
-      | Tabs About Doctor Component
+    .tabs-about-doctor__container
+      .tabs-about-doctor__title(v-html='props.title')
+      .tabs-about-doctor__col--left
+        .tabs-about-doctor__selectors
+          .tabs-about-doctor__selector(v-for='(selector, i) in props.bio', :key='i', @click='selectBio(i)')
+            .tabs-about-doctor__icon-circle(:class='{ "tabs-about-doctor__icon-circle--active": showBio === i }')
+              Icon.tabs-about-doctor__icon(:name='selector.icon', :class='{ "tabs-about-doctor__icon--active": showBio === i }')
+            .tabs-about-doctor__label(v-html='selector.label', :class='{ "tabs-about-doctor__label--active": showBio === i }')
+            .tabs-about-doctor__underline(:class='{ "tabs-about-doctor__underline--active": showBio === i }')
+              .tabs-about-doctor__orange-underline
+        .tabs-about-doctor__bio
+          .tabs-about-doctor__bio-content(v-for='(bio, j) in props.bio', :key='j', v-if='showBio === j')
+            ul
+              li.tabs-about-doctor__item(v-for='item in bio.content')
+                | {{ item.item }}
+          .tabs-about-doctor__seperator
+            .tabs-about-doctor__orange-line
+          
+      .tabs-about-doctor__col--right 
+        .tabs-about-doctor__image(:style='"background-image: url(" + props.image + ");"')
+
+        

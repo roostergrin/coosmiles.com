@@ -1,0 +1,13 @@
+.slider-home-smiles
+  swiper.slider-home-smiles__slider(:options='swiperOption')
+    swiperSlide.slider-home-smiles__slide(v-for='(slide, i) in props', :key='i')
+      img(:src='slide.url')
+      //- .slider-home-smiles__image(:style='"background-image: url(" + slide.url + ");"')
+  
+  .slider-home-smiles__pagination-container
+    .slider-home-smiles__prev-arrow(slot='button-prev')
+      Icon(name='Arrow')
+    .slider-home-smiles__pagination.swiper-pagination(slot='pagination')
+    .slider-home-smiles__next-arrow(slot='button-next')
+      Icon(name='Arrow')
+  

@@ -1,0 +1,25 @@
+.hero-pages
+  &__bg
+    position: relative
+    background-position: center center
+    background-size: cover
+    height: 80vh
+
+  &__container
+    position: absolute
+    top: 65%
+    left: 50%
+    transform: translateX(-50%)
+    text-align: center
+
+  &__title
+    @extend h1
+    margin-bottom: rem-calc(36)
+    text-transform: uppercase
+    letter-spacing: 2px
+    color: $c1
+    font-size: 48px
+    font-weight: 600
+
+  &__button
+    @extend .button

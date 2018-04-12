@@ -1,0 +1,57 @@
+.slider-home-smiles
+
+  &__slider
+    height: 420px
+
+  &__pagination-container
+    display: flex
+    position: relative
+    justify-content: center
+
+  &__pagination
+    display: flex
+    position: relative
+
+  &__bullet
+    margin: 24px 4px 0
+    border: 1px solid $c6
+    border-radius: 50%
+    width: 10px
+    height: 10px
+
+  &__bullet-active
+    background-color: $c6
+
+  &__prev-arrow, &__next-arrow
+    position: relative
+    z-index: 99
+    width: 21px
+
+    svg
+      fill: $c5
+
+  &__prev-arrow
+    transform: rotate(180deg) translateY(-6px)
+    margin-right: 1rem
+
+  &__next-arrow
+    transform: translateY(18px)
+    margin-left: 1rem
+
+  &__slide
+    img
+      transform: translateY(47px)
+      transition: all 0.8s ease
+      opacity: 0.58
+      background-color: $c8-overlay
+      height: 326px
+
+.swiper-slide
+  text-align: center
+
+.swiper-slide-active
+  img
+    transform: translateY(0)
+    transition: all 0.8s ease
+    opacity: 1
+    height: 420px

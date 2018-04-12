@@ -1,7 +1,9 @@
 .slider-home-testimonials
-  .slider-home-testimonials__slider
-    //- .slider-home-testimonials__slide(v-for='slide in props')
-      | {{ slide }}
-    .slider-home-testimonials__slide
-      .slider-home-testimonials__testimonial(v-html='props[0].testimonial')
-      .slider-home-testimonials__author(v-html='props[0].author')
+  swiper.slider-home-testimonials__slider(:options='swiperOption')
+    swiperSlide.slider-home-testimonials__slide(v-for='(slide, i) in props', :key='i')
+      .slider-home-testimonials__testimonial(v-html='slide.testimonial')
+      .slider-home-testimonials__author(v-html='slide.author')
+    .slider-home-testimonials__prev-arrow(slot='button-prev')
+      Icon(name='Arrow')
+    .slider-home-testimonials__next-arrow(slot='button-next')
+      Icon(name='Arrow')

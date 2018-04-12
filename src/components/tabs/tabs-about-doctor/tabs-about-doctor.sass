@@ -1,0 +1,84 @@
+.tabs-about-doctor
+  &__bg
+    background-image: url('../static/background-home-pattern.jpg')
+
+  &__container
+    @extend .container-fluid
+    padding-top: rem-calc(60)
+    padding-bottom: rem-calc(90)
+
+  &__title
+    @extend .title
+
+    &--option
+      @extend .title--option
+
+  &__col
+    &--left
+      @extend .col-sm-6
+
+    &--right
+      @extend .col-sm-6
+
+  &__selectors
+    display: flex
+    margin: 2rem 0 6rem
+
+  &__bio-content
+    margin: 2rem 0
+
+  &__icon-circle
+    margin: 1.6rem 2rem 0.8rem
+    border: 2px solid $c6
+    border-radius: 50%
+    padding: 1rem
+
+    &--active
+      border: 2px solid $c4
+
+  &__icon
+    width: 20px
+    height: 20px
+
+    svg
+      fill: $c6
+
+    &--active
+      svg
+        fill: $c3
+
+  &__label
+    text-align: center
+    text-transform: uppercase
+    color: $c6
+    font-weight: 400
+
+    &--active
+      color: $c4
+      font-weight: 700
+
+  &__underline
+    display: none
+    justify-content: center
+
+    &--active
+      display: flex
+
+  &__orange-underline
+    background: $c3
+    width: 100px
+    height: 3px
+
+  &__seperator
+    display: flex
+    justify-content: center
+    margin-top: 4rem
+
+  &__orange-line
+    background: $c3
+    width: 100px
+    height: 4px
+
+  &__image
+    width: 361px
+    height: 485px

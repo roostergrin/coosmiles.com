@@ -1,4 +1,5 @@
 .hero-pages
-  .hero-pages__bg
+  .hero-pages__bg(:style='"background-image: url(" + props.background_image + ");"')
     .hero-pages__container
-      | Hero Pages Component
+      .hero-pages__title(v-html='props.title')
+      a.hero-pages__button(v-html='props.button', :href='props.button_link')

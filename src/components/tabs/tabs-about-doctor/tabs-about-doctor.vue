@@ -1,7 +1,25 @@
 <template lang="pug" src="./tabs-about-doctor.pug"></template>
 
 <script>
+import Icon from 'components/icon/icon'
+
 export default {
-  props: ['props']
+  data () {
+    return {
+      showBio: 'childhood'
+    }
+  },
+  props: ['props'],
+  components: {
+    Icon
+  },
+  methods: {
+    selectBio (i) {
+      this.showBio = i
+    }
+  },
+  created () {
+    console.log(this.showBio)
+  }
 }
 </script>

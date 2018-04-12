@@ -1,4 +1,39 @@
 .slider-home-testimonials
   &__slider
-    @extend .col-sm-6
-    @extend .col-sm-offset-6
+    @extend .col-sm-7
+    @extend .col-sm-offset-5
+
+  &__slide
+    opacity: 0.64
+    border-radius: 20px
+    background-color: $c8-background
+    padding: 2rem 4rem
+
+  &__testimonial
+    color: $c8
+    font-size: 17px
+
+  &__author
+    padding-top: 1rem
+    text-align: center
+    letter-spacing: 2px
+    color: $c3
+    font-family: $font-family-sans-serif-option
+    font-size: 34px
+
+  &__next-arrow, &__prev-arrow
+    position: absolute
+    z-index: 99
+    width: 21px
+
+    svg
+      fill: $c3
+
+  &__next-arrow
+    top: 45%
+    right: 24px
+
+  &__prev-arrow
+    top: 44.5%
+    left: 24px
+    transform: rotate(180deg)
