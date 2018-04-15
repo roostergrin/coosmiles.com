@@ -3,5 +3,5 @@
   div(v-if='props')
     HeroPages(:props='props.acf')
     TabsAboutDoctor(:props='props.acf.tabs_about_doctor')
-    TabsAboutTeam(:props='props')
-    TabsAboutOffice(:props='props')
+    TabsAboutTeam(:props='props.acf.tabs_about_team')
+    TabsAboutOffice(:props='props.acf.tabs_about_office')

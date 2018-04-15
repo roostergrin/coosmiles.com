@@ -4,7 +4,7 @@
       .tabs-about-doctor__title(v-html='props.title')
       .tabs-about-doctor__col--left
         .tabs-about-doctor__selectors
-          .tabs-about-doctor__selector(v-for='(selector, i) in props.bio', :key='i', @click='selectBio(i)')
+          .tabs-about-doctor__selector(v-for='(selector, i) in props.bio', :key='i', @click='selectBio(i)', @mouseover='selectBio(i)')
             .tabs-about-doctor__icon-circle(:class='{ "tabs-about-doctor__icon-circle--active": showBio === i }')
               Icon.tabs-about-doctor__icon(:name='selector.icon', :class='{ "tabs-about-doctor__icon--active": showBio === i }')
             .tabs-about-doctor__label(v-html='selector.label', :class='{ "tabs-about-doctor__label--active": showBio === i }')

@@ -1,0 +1,47 @@
+.custom-patients-steps
+
+  &__bg
+    background-image: url('../static/background-home-pattern.jpg')
+
+  &__container
+    @extend .container-fluid
+    padding-top: rem-calc(60)
+    padding-bottom: rem-calc(90)
+
+  &__title
+    @extend .title
+
+    &--option
+      @extend .title--option
+
+  &__steps
+    margin: 0 auto
+    max-width: 900px
+
+  &__step
+    display: flex
+    margin: 2rem 0
+
+    &:first-child > .custom-patients-steps__content
+      align-self: center
+
+  &__number
+    display: inline-flex
+    margin-right: 2rem
+    border-radius: 50%
+    background-color: $c3
+    padding: 6px 20px
+    width: 60px
+    height: 60px
+    color: $c1
+    font-size: 36px
+
+  &__seperator
+    display: flex
+    justify-content: center
+    margin-top: 2rem
+
+  &__orange-line
+    background: $c3
+    width: 100px
+    height: 4px

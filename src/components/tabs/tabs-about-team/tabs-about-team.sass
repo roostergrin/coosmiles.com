@@ -1,0 +1,62 @@
+.tabs-about-team
+
+  &__container
+    @extend .container-fluid
+    padding-top: rem-calc(60)
+    padding-bottom: rem-calc(90)
+
+  &__title
+    @extend .title
+
+    &--option
+      @extend .title--option
+
+  &__team-container
+    @extend .row
+    margin-right: auto
+    margin-left: auto
+    max-width: 89rem
+
+  &__team-member
+    @extend .col-sm-3
+    padding: 0
+
+    &:nth-child(even)
+      transform: translateY(-100px)
+
+      @media(max-width: 768px)
+        transform: translateY(0)
+
+    &--image
+      position: relative
+      margin: 12px 0
+      border-radius: 50%
+      background-repeat: no-repeat
+      background-position: center
+      background-size: cover
+      padding-top: 100%
+      width: 100%
+      height: auto
+      overflow: hidden
+
+    &--content
+      position: absolute
+      top: 0
+      transition: all 0.8s ease
+      opacity: 0
+      background: rgba(59, 59, 60, 0.5)
+      padding: 8rem 4rem
+
+      &:hover
+        opacity: 1
+
+    &--name
+      margin-bottom: 6px
+      color: $c4
+      font-size: 24px
+      font-weight: 700
+
+    &--bio
+      line-height: 1.4rem
+      color: $c2
+      font-weight: 400

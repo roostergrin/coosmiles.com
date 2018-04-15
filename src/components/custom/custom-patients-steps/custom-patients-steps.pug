@@ -1,2 +1,12 @@
 .custom-patients-steps
-  | Custom Patients Steps Component
+  .custom-patients-steps__bg
+    .custom-patients-steps__container
+      .custom-patients-steps__title(v-html='props.title')
+      .custom-patients-steps__steps
+        .custom-patients-steps__step(v-for='(step, i) in props.steps', :key='i')
+          .custom-patients-steps__number {{ i+1 }}
+          .custom-patients-steps__content(v-html='step.step')
+        .custom-patients-steps__seperator
+          .custom-patients-steps__orange-line
+        
+        

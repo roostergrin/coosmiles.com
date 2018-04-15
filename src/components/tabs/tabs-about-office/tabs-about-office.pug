@@ -1,4 +1,7 @@
 .tabs-about-office
-  .tabs-about-office__container
-    .tabs-about-office__title
-      | Tabs About Office Component 
+  .tabs-about-office__bg
+    .tabs-about-office__container
+      .tabs-about-office__title(v-html='props.title')
+    .tabs-about-office__gallery-container 
+      .tabs-about-office__image(v-for='image in props.gallery', :style='"background-image: url(" + image.url + ");"')
+      

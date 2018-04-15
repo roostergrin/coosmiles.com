@@ -1,3 +1,6 @@
 .pages-new-patients
-  CustomPatientsSteps
-  CustomBeforeAfter
+  Loader(v-if='loading')
+  div(v-if='props')
+    HeroPages(:props='props.acf')
+    CustomPatientsSteps(:props='props.acf.custom_patients_steps')
+    CustomBeforeAfter(:props='props.acf.custom_patients_steps')
