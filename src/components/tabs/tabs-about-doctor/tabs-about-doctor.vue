@@ -17,9 +17,6 @@ export default {
     selectBio (i) {
       this.showBio = i
     }
-  },
-  created () {
-    console.log(this.showBio)
   }
 }
 </script>

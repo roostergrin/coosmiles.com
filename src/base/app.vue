@@ -3,7 +3,7 @@
 <script>
 // components
 import Navigation from 'components/navigation/navigation'
-import Revisions from 'revisions'
+import Footer from 'components/Footer/Footer'
 
 export default {
   created () {
@@ -22,7 +22,7 @@ export default {
   },
   components: {
     Navigation,
-    Revisions
+    Footer
   },
   name: 'app'
 }

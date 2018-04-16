@@ -1,2 +1,4 @@
 .pages-contact-us
-  CustomContactColumns
+  div(v-if='props')
+    HeroPages(:props='props.acf')
+    CustomContactColumns(:props='props.acf.custom_contact_columns')
