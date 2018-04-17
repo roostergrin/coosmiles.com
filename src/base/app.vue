@@ -9,6 +9,7 @@ export default {
   created () {
     this.$store.dispatch('GET_PAGES')
     this.$store.dispatch('GET_APP')
+    this.$store.dispatch('GET_BLOG')
     this.$store.dispatch('VIEW_NAV', false)
     this.$store.dispatch('VIEW_BODY', false)
     this.$store.dispatch('VIEW_TYPES', 0)
