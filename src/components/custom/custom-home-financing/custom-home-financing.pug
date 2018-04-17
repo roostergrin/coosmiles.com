@@ -5,7 +5,7 @@
       .custom-home-financing__body
         .custom-home-financing__col.custom-home-financing__col--left
           .custom-home-financing__circle(v-for='content in props.column_left')
-            .custom-home-financing__icon {{ content.icon }}
+            img.custom-home-financing__icon(:src='content.icon')
             .custom-home-financing__content(v-html='content.content')
         .custom-home-financing__col.custom-home-financing__col--right  
-          | Form
+          HomeForm
