@@ -2,11 +2,22 @@
   position: fixed
   top: 0
   left: 0
+  transition: all .5s ease-in-out
   z-index: 9996
   width: 100%
 
   &--scrolled
+    box-shadow: 0 2px 2px 1px $ol1
     background-color: $c1
+
+  &__desktop
+    @media screen and (max-width: $screen-sm)
+      display: none
+
+  &__mobile
+    display: none
+    @media screen and (max-width: $screen-sm)
+      display: block
 
   &__container
     @extend .container-fluid
@@ -54,8 +65,15 @@
         &:hover
           color: $c3
 
+    &--mobile
+      margin-bottom: rem-calc(8)
+      padding-bottom: rem-calc(8)
+
   &__button
     @extend .button
+    margin-right: rem-calc(24)
+    margin-left: rem-calc(24)
+    text-align: center
 
     .navigation--scrolled &
       border: 1px solid $c6
@@ -63,3 +81,19 @@
       &:hover
         border: 1px solid $c4
         color: $c4
+
+  // -------- mobile --------
+
+  &__menu
+    position: absolute
+    top: 50%
+    right: rem-calc(16)
+    transform: translateY(-50%)
+    border-radius: 5px
+    background-color: $c1
+    padding: rem-calc(8) rem-calc(16)
+    color: $c4
+
+    .navigation--scrolled &
+      background-color: $c1
+      color: $c6

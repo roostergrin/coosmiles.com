@@ -1,5 +1,5 @@
-nav.navigation
-  .navigation__container
+nav.navigation(:class="{'navigation--scrolled': $store.state.nav || menu}")
+  .navigation__container.navigation__desktop
     .navigation__icon
       router-link(to='/')
         Icon(name='logo-coo')
@@ -14,3 +14,21 @@ nav.navigation
           a {{ nav.name }}
       span.navigation__link.navigation__button
         | Complimentary Exam
+  
+  .navigation__container.navigation__mobile
+    .navigation__icon(@click='menu = false')
+      router-link(to='/')
+        Icon(name='logo-coo')
+          
+    .navigation__icon.navigation__icon--option(@click='menu = false')
+      router-link(to='/')
+        Icon(name='logo-coo-option')
+          
+    .navigation__menu(@click='menu ? menu = false : menu = true') MENU
+  
+  .navigation__container.navigation__mobile.navigation__links--mobile(v-if='menu')
+    .navigation__link.navigation__link--mobile(v-for='nav in props', v-if='nav.navigation', @click='menu = false')
+      router-link(:to='nav.path') {{ nav.name }}
+      
+    .navigation__link.navigation__link--mobile.navigation__button
+      | Complimentary Exam  
