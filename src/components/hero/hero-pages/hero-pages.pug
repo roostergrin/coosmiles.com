@@ -3,3 +3,4 @@
     .hero-pages__container
       .hero-pages__title(v-html='props.title')
       a.hero-pages__button(v-html='props.button', :href='props.button_link')
+      .hero-pages__waypoint(v-waypoint='{ active: true, callback: scrolled}')  
