@@ -20,9 +20,6 @@ export default {
     HeroPages,
     CustomPatientsSteps,
     CustomBeforeAfter
-  },
-  created () {
-    console.log(this.props)
   }
 }
 </script>

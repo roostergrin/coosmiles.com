@@ -12,6 +12,7 @@ import * as customFilters from './shared/filters/filters'
 import VueWaypoint from 'vue-waypoint'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
+import VueImageCompare from 'vue-image-compare'
 
 // Vue config
 Vue.config.productionTip = false
@@ -38,6 +39,7 @@ Vue.use(VeeValidate)
 Vue.use(VueWaypoint)
 // Vue.use(VueCookies)
 Vue.use(VueAwesomeSwiper)
+Vue.use(VueImageCompare)
 
 /* eslint-disable no-new */
 new Vue({

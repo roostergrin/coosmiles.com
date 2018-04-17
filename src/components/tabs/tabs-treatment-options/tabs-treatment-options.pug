@@ -4,8 +4,8 @@
       .tabs-treatment-options__title(v-html='props.title')
     .tabs-treatment-options__treatment-container
       .tabs-treatment-options__treatment(v-for='treatment in props.treatment')
-        .tabs-treatment-options__treatment--overlay(style='background-image: url(http://coosmiles.roostertest3.com/static/CircleOverlay.svg)')
+        .tabs-treatment-options__treatment--overlay(style="background-image: url(static/CircleOverlay.svg)")
         .tabs-treatment-options__treatment--image(:style='"background-image: url(" + treatment.image  + ");"')
           .tabs-treatment-options__treatment--info 
-            .tabs-treatment-options__treatment--name
-            .tabs-treatment-options__treatment--content
+            .tabs-treatment-options__treatment--name(v-html='treatment.name')
+            .tabs-treatment-options__treatment--content(v-html='treatment.content')
