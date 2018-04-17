@@ -2,6 +2,12 @@
 
 <script>
 export default {
-  props: ['props']
+  props: ['props'],
+  methods: {
+    scrolled ({ going, direction }) {
+      if (going === this.$waypointMap.GOING_OUT) { this.$store.dispatch('VIEW_NAV', true) }
+      if (going === this.$waypointMap.GOING_IN) { this.$store.dispatch('VIEW_NAV', false) }
+    }
+  }
 }
 </script>
