@@ -2,7 +2,7 @@ import axios from 'axios'
 import api from 'api'
 import {
   GET_PAGES,
-  // GET_BLOG,
+  GET_BLOG,
   GET_APP,
   VIEW_NAV,
   VIEW_BODY,
@@ -38,15 +38,23 @@ const actions = {
       } catch (e) { console.log('APP API: ' + e) }
     })()
   },
-  // GET_BLOG ({ commit }) {
-  //   (async () => {
-  //     try {
-  //       const response = await axios.get(`${api}/wp/v2/posts?per_page=10&_embed`)
-  //       commit(GET_BLOG, response)
-  //     } catch (e) {
-  //       console.log(e)
-  //     }
-  //   })()
+  GET_BLOG ({ commit }) {
+    (async () => {
+      try {
+        const response = await axios.get(`${api}/wp/v2/posts?per_page=100&_embed`)
+        const data = response.data.reduce(
+          (allData, data) => ({ ...allData, [data.slug]: data }),
+          {}
+        )
+        // console.log(response.data)
+        commit(GET_BLOG, data)
+      } catch (e) {
+        console.log(e)
+      }
+    })()
+  },
+  // GET_MORE ({ commit }) {
+  //   const response = axios.get(`${api}/wp/v2/posts?per_page=4&offset=4`)
   // },
   VIEW_NAV ({ commit }, data) {
     commit(VIEW_NAV, data)
