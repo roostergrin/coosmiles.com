@@ -28,15 +28,18 @@
     margin: 2rem 0
 
   &__icon-circle
+    transition: all 0.8s ease
     margin: 1.6rem 2rem 0.8rem
     border: 2px solid $c6
     border-radius: 50%
     padding: 1rem
 
     &--active
+      transition: all 0.8s ease
       border: 2px solid $c4
 
   &__icon
+    transition: all 0.8s ease
     width: 20px
     height: 20px
 
@@ -45,9 +48,11 @@
 
     &--active
       svg
+        transition: all 0.8s ease
         fill: $c3
 
   &__label
+    transition: all 0.8s ease
     text-align: center
     text-transform: uppercase
     color: $c6
@@ -58,11 +63,15 @@
       font-weight: 700
 
   &__underline
-    display: none
+    display: flex
     justify-content: center
+    transition: all 0.8s ease
+    opacity: 0
 
     &--active
       display: flex
+      transition: all 0.8s ease
+      opacity: 1
 
   &__orange-underline
     background: $c3
