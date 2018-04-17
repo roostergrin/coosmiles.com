@@ -9,6 +9,11 @@ export default {
       return this.$router.options.routes
     }
   },
+  data () {
+    return {
+      menu: false
+    }
+  },
   components: {
     Icon
   }
