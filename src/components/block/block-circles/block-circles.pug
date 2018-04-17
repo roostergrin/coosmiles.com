@@ -2,7 +2,7 @@
   .block-circles__bg(v-if='props')
     .block-circles__container
       .block-circles__circle(v-for='(circle, j, i) in props', v-show='i <= counter')
-        .block-circles__circle--overlay(style='background-image: url(http://coosmiles.roostertest3.com/static/CircleOverlay.svg)')
+        .block-circles__circle--overlay(style='background-image: url(static/CircleOverlay.svg)')
         .block-circles__circle--image(:style='"background-image: url(" + circle.acf.events.image + ");"', v-if='circle.acf.events')
           .block-circles__circle--info
             .block-circles__circle--title(v-html='circle.title.rendered')
