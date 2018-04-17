@@ -20,6 +20,12 @@
   &__team-member
     @extend .col-sm-3
     padding: 0
+    &:hover
+      cursor: pointer
+      .tabs-about-team__team-member--overlay
+        opacity: 1
+      .tabs-about-team__team-member--content
+        opacity: 1
 
     &:nth-child(even)
       transform: translateY(-100px)
@@ -39,6 +45,7 @@
       background-size: cover
       width: 100%
       height: 100%
+      overflow: hidden
 
     &--image
       position: relative
