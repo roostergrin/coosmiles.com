@@ -13,14 +13,20 @@
 
   &__row
     @extend .row
+    margin-top: 4rem
+    margin-right: 60px
+    margin-left: 60px
 
   &__col-left, &__col-center, &__col-right
     @extend .col-sm-4
 
   &__phone, &__email, &__hours, &__location
     display: flex
+    align-items: center
+    margin-bottom: 1.6rem
 
     &--icon
+      margin-right: 1rem
       border-radius: 50%
       background: $c4
       width: 40px
@@ -44,3 +50,8 @@
   &__location
     &--icon
       padding: 10px 12px 12px
+
+  &__map
+    &--map
+      border: none
+      border-radius: 10px

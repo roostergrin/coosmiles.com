@@ -1,2 +1,7 @@
 .block-intro
-  | Block Intro Component
+  .block-intro__bg
+    .block-intro__container
+      .block-intro__title(v-html='props.title')
+      .block-intro__content(v-html='props.content')
+      .block-intro__seperator
+        .block-intro__orange-line

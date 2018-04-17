@@ -1,4 +1,5 @@
 .pages-community
-  //- Loader(v-show='!loading')
-  HeroPages
-  BlockIntro
+  div(v-if='props')
+    HeroPages(:props='props.acf')
+    BlockIntro(:props='props.acf.block_intro')
+    TabsCommunityEvents(:props='props.acf.tabs_community_events')  

@@ -7,7 +7,7 @@ import TabsTreatmentOptions from 'components/tabs/tabs-treatment-options/tabs-tr
 export default {
   computed: {
     props () {
-      return this.$state.store.pages.treatments
+      return this.$store.state.pages.treatments
     }
   },
   components: {

@@ -1,0 +1,28 @@
+.block-intro
+
+  &__bg
+    background-image: url('../static/background-home-pattern.jpg')
+
+  &__container
+    @extend .container-fluid
+    padding-top: rem-calc(60)
+    padding-bottom: rem-calc(90)
+
+  &__title
+    @extend .title
+
+    &--option
+      @extend .title--option
+
+  &__content
+    margin: 4rem 6rem 2rem
+
+  &__seperator
+    display: flex
+    justify-content: center
+    margin-top: 2rem
+
+  &__orange-line
+    background: $c3
+    width: 100px
+    height: 4px

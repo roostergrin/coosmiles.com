@@ -23,7 +23,7 @@
               Icon(name='Pin')
             .custom-contact-columns__location--address(v-html='props.address')
           .custom-contact-columns__map
-            iframe(:src='props.map_embed_link', width='300', height='300')
+            iframe.custom-contact-columns__map--map(:src='props.map_embed_link', width='280', height='280')
               
               
         .custom-contact-columns__col-right

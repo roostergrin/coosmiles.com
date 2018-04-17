@@ -2,6 +2,11 @@
 
 <script>
 export default {
-  props: ['props']
+  props: ['props'],
+  methods: {
+    alertOnMouse () {
+      console.log('Mouseover')
+    }
+  }
 }
 </script>
