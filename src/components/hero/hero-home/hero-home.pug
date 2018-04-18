@@ -6,5 +6,7 @@
       a.hero-home__button(@click='showComplimentaryModal = true')
         | Complimentary Exam  
       .hero-home__waypoint(v-waypoint='{ active: true, callback: scrolled}')
-  ComplimentaryExamForm(v-show='showComplimentaryModal', @closeComplimentaryModal='showComplimentaryModal = false')
+        
+  transition(name='fade-in-modal') 
+    ComplimentaryExamForm(v-show='showComplimentaryModal', @closeComplimentaryModal='showComplimentaryModal = false')
   

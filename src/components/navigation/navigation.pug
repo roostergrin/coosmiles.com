@@ -15,7 +15,8 @@ nav.navigation(:class="{'navigation--scrolled': $store.state.nav || menu}")
       span.navigation__link.navigation__button(@click='showComplimentaryModal = true')
         | Complimentary Exam
         
-  ComplimentaryExamForm(v-show='showComplimentaryModal', @closeComplimentaryModal='showComplimentaryModal = false')
+  transition(name='fade-in-modal')    
+    ComplimentaryExamModal(v-show='showComplimentaryModal', @closeComplimentaryModal='showComplimentaryModal = false')
   
   .navigation__container.navigation__mobile
     .navigation__icon(@click='menu = false')

@@ -4,6 +4,7 @@
       .tabs-about-office__title(v-html='props.title')
     .tabs-about-office__gallery-container 
       .tabs-about-office__image(v-for='(image, i) in props.gallery', :key='i', :style='"background-image: url(" + image.url + ");"', @click='displayOfficeTourModal(i)')
-        
-  OfficeTourModal(v-show='showModal', :props='modalData', @closeOfficeTourModal='showModal = false')
+  
+  transition(name='fade-in-modal')  
+    OfficeTourModal(v-show='showModal', :props='modalData', @closeOfficeTourModal='showModal = false')
       
