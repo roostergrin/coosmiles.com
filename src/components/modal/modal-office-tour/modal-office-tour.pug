@@ -1,0 +1,6 @@
+.modal-office-tour
+  .modal-office-tour__bg
+    .modal-office-tour__container
+      .modal-office-tour__close(@click='$emit("closeOfficeTourModal")')
+      .modal-office-tour__body
+        .modal-office-tour__image(:style='"background-image: url(" + props.url + ");"')

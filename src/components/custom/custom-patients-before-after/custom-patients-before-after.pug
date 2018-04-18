@@ -7,6 +7,10 @@
           .custom-before-after__patient--name(v-html='patient.name')
           .custom-before-after__col-left
             image-compare.custom-before-after__front-teeth(:before='patient.left_after_image', :after='patient.left_before_image')
+              Icon(name='LeftArrow', aria-hidden='true', slot='icon-left')
+              Icon(name='RightArrow', aria-hidden='true', slot='icon-right')
           .custom-before-after__col-right
             image-compare.custom-before-after__side-teeth(:before='patient.right_after_image', :after='patient.right_before_image')
+              Icon(name='LeftArrow', aria-hidden='true', slot='icon-left')
+              Icon(name='RightArrow', aria-hidden='true', slot='icon-right')
           
