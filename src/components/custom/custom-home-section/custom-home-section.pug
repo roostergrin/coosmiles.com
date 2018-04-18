@@ -6,5 +6,7 @@
       .custom-home-section__cta(v-html='props.cta')
     .custom-home-section__video
       .custom-home-section__overlay
-        img(:src='props.image').custom-home-section__image
+        img.custom-home-section__image(:src='props.image', @click='showModal = true')
+              
+  HomeVideoModal(:props='props', @closeHomeVideoModal='showModal = false', v-show='showModal')
         

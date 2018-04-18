@@ -3,9 +3,16 @@
 <script>
 export default {
   props: ['props'],
+  data () {
+    return {
+      fadeImages: false
+    }
+  },
   methods: {
-    alertOnMouse () {
-      console.log('Mouseover')
+    onWaypointTeam ({ going, direction }) {
+      if (going === this.$waypointMap.GOING_IN) {
+        this.fadeImages = true
+      }
     }
   }
 }

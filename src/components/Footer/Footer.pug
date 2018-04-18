@@ -2,20 +2,20 @@
   .footer__bg
     .footer__container
       .footer__social-icons
-        .footer__phone-icon
+        a.footer__phone-icon(:href='props.props.acf.footer.phone_link')
           Icon(name='Phone')
-        .footer__email-icon
+        a.footer__email-icon(:href='props.props.acf.footer.email_link')
           Icon(name='Email')
-        .footer__facebook-icon
+        a.footer__facebook-icon(:href='props.props.acf.footer.facebook_link', target='_blank')
           Icon(name='Facebook')
-        .footer__instagram-icon
+        a.footer__instagram-icon(:href='props.props.acf.footer.instagram_link', target='_blank')
           Icon(name='Instagram')
-      .footer__logo
+      router-link.footer__logo(to='/')
         Icon(name='FooterLogo')
       .footer__information
-        .footer__address(v-html='props.props.acf.footer.address')
-        .footer__phone-number(v-html='props.props.acf.footer.phone_number')
+        a.footer__address(v-html='props.props.acf.footer.address', :href='props.props.acf.footer.map_link')
+        a.footer__phone-number(v-html='props.props.acf.footer.phone_number', :href='props.props.acf.footer.phone_link')
   .footer__bottom-bg
     .footer__bottom-container
-      .footer__copyright Online Advantage by Rooster Grin
+      a.footer__copyright(href='https://www.roostergrin.com/') Online Advantage by Rooster Grin
           

@@ -20,7 +20,14 @@
 
   &__treatment
     @extend .col-sm-3
+    transform: translateY(50px)
+    transition: all 0.8s ease
+    opacity: 0
     padding: 0
+
+    &--active
+      transform: translateY(0)
+      opacity: 1
 
     &:hover
       cursor: pointer

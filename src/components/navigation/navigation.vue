@@ -2,6 +2,7 @@
 
 <script>
 import Icon from 'components/icon/icon'
+import ComplimentaryExamForm from 'components/modal/modal-complimentary-exam/modal-complimentary-exam'
 
 export default {
   computed: {
@@ -11,11 +12,19 @@ export default {
   },
   data () {
     return {
-      menu: false
+      menu: false,
+      showComplimentaryModal: false
     }
   },
   components: {
-    Icon
+    Icon,
+    ComplimentaryExamForm
+  },
+  methods: {
+    displayComplimentaryModal () {
+      this.showComplimentaryModal === true
+      console.log('hello')
+    }
   }
 }
 

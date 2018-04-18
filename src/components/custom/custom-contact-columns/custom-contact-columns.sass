@@ -4,6 +4,7 @@
     @extend .container-fluid
     padding-top: rem-calc(60)
     padding-bottom: rem-calc(90)
+    color: $c7
 
   &__title
     @extend .title
@@ -38,10 +39,16 @@
   &__phone
     &--icon
       padding: 8px
+    &--number
+      a
+        color: $c7
 
   &__email
     &--icon
       padding: 12px 7px 8px
+    &--address
+      a
+        color: $c7
 
   &__hours
     &--icon
@@ -50,6 +57,8 @@
   &__location
     &--icon
       padding: 10px 12px 12px
+    &--address
+      color: $c7
 
   &__map
     &--map

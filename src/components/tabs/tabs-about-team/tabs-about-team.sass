@@ -19,13 +19,21 @@
 
   &__team-member
     @extend .col-sm-3
+    transform: translateY(50px)
+    transition: all 0.8s ease
+    opacity: 0
     padding: 0
+
     &:hover
       cursor: pointer
       .tabs-about-team__team-member--overlay
         opacity: 1
       .tabs-about-team__team-member--content
         opacity: 1
+
+    &--active
+      transform: translateY(0)
+      opacity: 1
 
     &:nth-child(even)
       transform: translateY(-100px)

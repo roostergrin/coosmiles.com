@@ -21,7 +21,7 @@
           .custom-contact-columns__location
             .custom-contact-columns__location--icon
               Icon(name='Pin')
-            .custom-contact-columns__location--address(v-html='props.address')
+            a.custom-contact-columns__location--address(v-html='props.address', :href='props.map_link')
           .custom-contact-columns__map
             iframe.custom-contact-columns__map--map(:src='props.map_embed_link', width='280', height='280')
               

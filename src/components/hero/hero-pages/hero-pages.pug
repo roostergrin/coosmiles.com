@@ -2,5 +2,6 @@
   .hero-pages__bg(:style='"background-image: url(" + props.background_image + ");"')
     .hero-pages__container
       .hero-pages__title(v-html='props.title')
-      a.hero-pages__button(v-html='props.button', :href='props.button_link')
+      a.hero-pages__button(v-html='props.button', @click='showComplimentaryModal = true')
       .hero-pages__waypoint(v-waypoint='{ active: true, callback: scrolled}')  
+  ComplimentaryExamForm(v-show='showComplimentaryModal', @closeComplimentaryModal='showComplimentaryModal = false')

@@ -3,10 +3,11 @@
     .tabs-about-team__container
       .tabs-about-team__title(v-html='props.title')
     .tabs-about-team__team-container
-      .tabs-about-team__team-member(v-for='member in props.team_member')
+      .tabs-about-team__team-member(v-for='member in props.team_member', :class='{ "tabs-about-team__team-member--active": fadeImages === true}')
         .tabs-about-team__team-member--overlay(style="background-image: url(static/CircleOverlay.svg)")
         .tabs-about-team__team-member--image(:style='"background-image: url(" + member.image + ");"')
           .tabs-about-team__team-member--content
             .tabs-about-team__team-member--name(v-html='member.name')
             .tabs-about-team__team-member--bio(v-html='member.bio')
+        .tabs-about-team__waypoint(v-waypoint="{ active: true, callback: onWaypointTeam }")
           

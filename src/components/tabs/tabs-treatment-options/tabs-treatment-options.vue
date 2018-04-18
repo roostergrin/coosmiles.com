@@ -2,6 +2,18 @@
 
 <script>
 export default {
-  props: ['props']
+  props: ['props'],
+  data () {
+    return {
+      fadeTreatment: false
+    }
+  },
+  methods: {
+    onWaypointTreatment ({ going, direction }) {
+      if (going === this.$waypointMap.GOING_IN) {
+        this.fadeTreatment = true
+      }
+    }
+  }
 }
 </script>
