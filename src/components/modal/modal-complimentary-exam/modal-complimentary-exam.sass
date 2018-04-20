@@ -16,7 +16,8 @@
     @extend .container-fluid
     display: flex
     align-items: center
-    background: $c2
+    border-radius: 8px
+    background: $c4
     background-repeat: no-repeat
     background-position: center
     background-size: cover
@@ -25,18 +26,18 @@
 
   &__close
     position: absolute
-    top: 12px
+    top: 18px
     right: 12px
     width: 32px
     height: 32px
-    color: $c4
+    color: $c1
 
     &::before, &::after
       position: absolute
       left: 15px
-      background-color: $c4
+      background-color: $c1
       width: 2px
-      height: 33px
+      height: 20px
       content: ' '
 
     &::before
@@ -46,11 +47,23 @@
       transform: rotate(-45deg)
 
   &__title
+    transform: translateY(10px)
+    transition: all 0.8s ease
+    animation: fade-up 0.8s ease-in-out forwards
+    opacity: 0
     margin-bottom: 2rem
+    text-align: center
     text-transform: uppercase
-    color: $c4
+    color: $c1
     font-size: 18px
     font-weight: 700
+
+    @keyframes fade-up
+      0%
+        transform: translateY(10px)
+      100%
+        transform: translateY(0)
+        opacity: 1
 
   &__body
     margin: 0 auto

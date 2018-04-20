@@ -1,7 +1,7 @@
 .tabs-about-team
   .tabs-about-team__bg
     .tabs-about-team__container
-      .tabs-about-team__title(v-html='props.title')
+      .tabs-about-team__title(v-html='props.title', :class='{ "tabs-about-team__title--active": fadeTitle}', v-waypoint="{ active: true, callback: onWaypointTitle, options: intersectionTitleOptions }")
     .tabs-about-team__team-container
       .tabs-about-team__team-member(v-for='member in props.team_member', :class='{ "tabs-about-team__team-member--active": fadeImages === true}')
         .tabs-about-team__team-member--overlay(style="background-image: url(static/CircleOverlay.svg)")

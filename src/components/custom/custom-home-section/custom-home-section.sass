@@ -6,16 +6,21 @@
 
   &__title
     @extend .title
+    transform: translateY(50px)
+    transition: all 0.6s ease
+    opacity: 0
     margin-bottom: rem-calc(60)
+
+    &--active
+      transform: translateY(0)
+      opacity: 1
 
   &__body
     @extend .col-sm-7
     @extend .col-sm-offset-1
 
   &__content
-    @extend .border-bottom
     position: relative
-    margin-bottom: rem-calc(80)
 
   &__cta
     text-align: center
@@ -25,7 +30,39 @@
 
   &__video
     @extend .col-sm-4
+    transform: translateX(50px)
+    transition: all 0.6s ease
+    opacity: 0
+
+    &--active
+      transform: translateX(0)
+      opacity: 1
+
 
   &__image
+    transition: all 0.6s ease
     margin-top: -50px
+    border-radius: 20px
+    box-shadow: 5px 8px 24px 0 rgba(133, 133, 134, 0.2)
     height: rem-calc(325)
+
+    &:hover
+      box-shadow: 10px 9px 24px 0 rgba(133, 133, 134, 0.3)
+
+  &__seperator
+    display: flex
+    justify-content: center
+    transform: translateY(50px)
+    transition: all 0.8s ease
+    opacity: 0
+    margin-top: 2rem
+    margin-bottom: 4rem
+
+    &--active
+      transform: translateY(0)
+      opacity: 1
+
+  &__orange-line
+    background: $c3
+    width: 100px
+    height: 4px

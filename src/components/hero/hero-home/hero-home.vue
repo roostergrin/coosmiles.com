@@ -2,11 +2,21 @@
 
 <script>
 import ComplimentaryExamForm from 'components/modal/modal-complimentary-exam/modal-complimentary-exam'
+import { elFadeUp } from 'components/mixins'
+import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
 export default {
   data () {
     return {
-      showComplimentaryModal: false
+      showComplimentaryModal: false,
+      swiperOption: {
+        slidesPerView: 1,
+        loop: true,
+        speed: 1500,
+        autoplay: {
+          delay: 3000
+        }
+      }
     }
   },
   methods: {
@@ -16,8 +26,11 @@ export default {
     }
   },
   components: {
-    ComplimentaryExamForm
-  }
+    ComplimentaryExamForm,
+    swiper,
+    swiperSlide
+  },
+  mixins: [elFadeUp]
 }
 </script>
 

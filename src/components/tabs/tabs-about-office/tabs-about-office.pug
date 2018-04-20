@@ -1,7 +1,7 @@
 .tabs-about-office
   .tabs-about-office__bg
     .tabs-about-office__container
-      .tabs-about-office__title(v-html='props.title')
+      .tabs-about-office__title(v-html='props.title', :class='{ "tabs-about-office__title--active": fadeTitle}', v-waypoint="{ active: true, callback: onWaypointTitle, options: intersectionTitleOptions }")
     .tabs-about-office__gallery-container 
       .tabs-about-office__image(v-for='(image, i) in props.gallery', :key='i', :style='"background-image: url(" + image.url + ");"', @click='displayOfficeTourModal(i)')
   

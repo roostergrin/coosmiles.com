@@ -1,10 +1,13 @@
 .block-intro-home
   .block-intro-home__bg
     .block-intro-home__container
-      .block-intro-home__title
+      .block-intro-home__title(:class='{ "block-intro-home__title--active": fadeTitle}', v-waypoint="{ active: true, callback: onWaypointTitle, options: intersectionTitleOptions }")
         | Central Ohio
         br
         span.block-intro-home__title--option
           | Orthodontics
-      .block-intro-home__content
-        | It’s time to shine! While we work towards the goal of a straighter smile, Doctor Miller and the COO team make it their personal mission to brighten each patient’s day while in the office. A beautiful smile and an uplifting atmosphere instills confidence in each of our patients which makes them smile bigger and shine brighter. Our patients shine inside and out!
+      .block-intro-home__row
+        .block-intro-home__content
+          | It’s time to shine! While we work towards the goal of a straighter smile, Doctor Miller and the COO team make it their personal mission to brighten each patient’s day while in the office. A beautiful smile and an uplifting atmosphere instills confidence in each of our patients which makes them smile bigger and shine brighter. Our patients shine inside and out!
+      .block-intro-home__seperator(:class='{ "block-intro-home__seperator--active": fadeLine}', v-waypoint="{ active: true, callback: onWaypointLine, options: intersectionLineOptions }")
+        .block-intro-home__orange-line

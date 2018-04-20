@@ -2,6 +2,7 @@
 
 <script>
 import OfficeTourModal from 'components/modal/modal-office-tour/modal-office-tour'
+import { elFadeUp } from 'components/mixins'
 
 export default {
   props: ['props'],
@@ -19,7 +20,8 @@ export default {
       this.showModal = true
       this.modalData = this.props.gallery[i]
     }
-  }
+  },
+  mixins: [elFadeUp]
 }
 </script>
 

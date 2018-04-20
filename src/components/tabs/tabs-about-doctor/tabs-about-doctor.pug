@@ -1,7 +1,7 @@
 .tabs-about-doctor
   .tabs-about-doctor__bg
     .tabs-about-doctor__container
-      .tabs-about-doctor__title(v-html='props.title')
+      .tabs-about-doctor__title(v-html='props.title', :class='{ "tabs-about-doctor__title--active": fadeTitle}', v-waypoint="{ active: true, callback: onWaypointTitle, options: intersectionTitleOptions }")
       .tabs-about-doctor__col--left
         .tabs-about-doctor__selectors
           .tabs-about-doctor__selector(v-for='(selector, i) in props.bio', :key='i', @click='selectBio(i)', @mouseover='selectBio(i)')
@@ -15,7 +15,7 @@
             ul
               li.tabs-about-doctor__item(v-for='item in bio.content')
                 | {{ item.item }}
-          .tabs-about-doctor__seperator
+          .tabs-about-doctor__seperator(:class='{ "tabs-about-doctor__seperator--active": fadeLine}', v-waypoint="{ active: true, callback: onWaypointLine, options: intersectionLineOptions }")
             .tabs-about-doctor__orange-line
           
       .tabs-about-doctor__col--right 

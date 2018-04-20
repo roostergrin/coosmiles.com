@@ -1,6 +1,6 @@
 .custom-home-smiles
   .custom-home-smiles__container
-    .custom-home-smiles__title(v-html='props.title')
+    .custom-home-smiles__title(v-html='props.title', :class='{ "custom-home-smiles__title--active": fadeTitle}', v-waypoint="{ active: true, callback: onWaypointTitle, options: intersectionTitleOptions }")
       
     SliderHomeSmiles(:props='props.gallery')
       

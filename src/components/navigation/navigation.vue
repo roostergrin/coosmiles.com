@@ -19,12 +19,6 @@ export default {
   components: {
     Icon,
     ComplimentaryExamModal
-  },
-  methods: {
-    displayComplimentaryModal () {
-      this.showComplimentaryModal === true
-      console.log('hello')
-    }
   }
 }
 

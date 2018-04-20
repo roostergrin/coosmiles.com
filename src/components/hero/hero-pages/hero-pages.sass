@@ -3,23 +3,31 @@
     position: relative
     background-position: center center
     background-size: cover
-    height: 80vh
+    height: 100vh
 
   &__container
     position: absolute
     top: 65%
     left: 50%
     transform: translateX(-50%)
+    transition: all 0.6s ease
+    opacity: 1
     text-align: center
 
   &__title
     @extend h1
+    transform: translateY(10px)
+    transition: all 0.8s ease
+    opacity: 0
     margin-bottom: rem-calc(36)
     text-transform: uppercase
     letter-spacing: 2px
     color: $c1
-    font-size: 48px
     font-weight: 600
+
+    &--active
+      transform: translateY(0)
+      opacity: 1
 
   &__button
     @extend .button

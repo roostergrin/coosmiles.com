@@ -2,6 +2,7 @@
 
 <script>
 import ComplimentaryExamForm from 'components/modal/modal-complimentary-exam/modal-complimentary-exam'
+import { elFadeUp } from 'components/mixins'
 
 export default {
   data () {
@@ -18,7 +19,8 @@ export default {
   },
   components: {
     ComplimentaryExamForm
-  }
+  },
+  mixins: [elFadeUp]
 }
 </script>
 

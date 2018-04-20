@@ -1,6 +1,8 @@
 <template lang="pug" src="./tabs-about-team.pug"></template>
 
 <script>
+import { elFadeUp } from 'components/mixins'
+
 export default {
   props: ['props'],
   data () {
@@ -14,6 +16,7 @@ export default {
         this.fadeImages = true
       }
     }
-  }
+  },
+  mixins: [elFadeUp]
 }
 </script>

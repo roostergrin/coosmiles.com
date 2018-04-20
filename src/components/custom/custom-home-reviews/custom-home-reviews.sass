@@ -1,13 +1,92 @@
 .custom-home-reviews
+
+  &__slider
+    position: relative
+    height: 85vh
+
+  &__slide
+    height: 85vh
+
+  &__image
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    height: 85vh
+
   &__bg
     background-position: center center
     background-size: cover
 
   &__container
     @extend .container-fluid
+    position: absolute
+    z-index: 95
+    margin-right: auto
+    margin-left: auto
     padding-top: rem-calc(80)
     padding-bottom: rem-calc(80)
+    width: 100%
+    max-width: 100%
+
 
   &__title
     @extend .title
+    transform: translateY(50px)
+    transition: all 0.6s ease
+    opacity: 0
+    margin: 0 auto
     margin-bottom: rem-calc(32)
+    max-width: 71.25rem
+
+    &--active
+      transform: translateY(0)
+      opacity: 1
+
+  &__testimonial
+    @extend .col-sm-5
+    @extend .col-sm-offset-5
+    position: relative
+    transform: translateY(75%)
+    transition: all 0.8s ease-in-out
+    opacity: 0.64
+    border-radius: 20px
+    background: $c8-background
+    padding: 24px 48px
+
+    &--active
+      opacity: 0
+
+
+    &--text
+      color: $c8
+      font-size: 17px
+
+    &--author
+      padding-top: 1rem
+      text-align: center
+      letter-spacing: 2px
+      color: $c3
+      font-family: $font-family-sans-serif-option
+      font-size: 34px
+
+  &__next-arrow, &__prev-arrow
+    position: absolute
+    transition: all 0.4s ease
+    opacity: 1
+    z-index: 999
+    width: 21px
+
+    svg
+      fill: $c3
+
+    &--active
+      opacity: 0
+
+  &__next-arrow
+    top: 340px
+    right: 17.5%
+
+  &__prev-arrow
+    top: 335px
+    left: 42.5%
+    transform: rotate(180deg)

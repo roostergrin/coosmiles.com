@@ -9,9 +9,16 @@
 
   &__title
     @extend .title
+    transform: translateY(50px)
+    transition: all 0.6s ease
+    opacity: 0
 
     &--option
       @extend .title--option
+
+    &--active
+      transform: translateY(0)
+      opacity: 1
 
   &__col
     &--left
@@ -81,7 +88,14 @@
   &__seperator
     display: flex
     justify-content: center
-    margin-top: 4rem
+    transform: translateY(50px)
+    transition: all 0.8s ease
+    opacity: 0
+    margin-top: 2rem
+
+    &--active
+      transform: translateY(0)
+      opacity: 1
 
   &__orange-line
     background: $c3

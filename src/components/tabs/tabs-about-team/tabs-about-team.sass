@@ -7,9 +7,16 @@
 
   &__title
     @extend .title
+    transform: translateY(50px)
+    transition: all 0.6s ease
+    opacity: 0
 
     &--option
       @extend .title--option
+
+    &--active
+      transform: translateY(0)
+      opacity: 1
 
   &__team-container
     @extend .row

@@ -1,10 +1,10 @@
 .custom-home-financing
   .custom-home-financing__bg(:style="{ backgroundImage: 'url('+ props.background +')' }")
     .custom-home-financing__container
-      .custom-home-financing__title(v-html='props.title')
+      .custom-home-financing__title(v-html='props.title', :class='{ "custom-home-financing__title--active": fadeTitle}', v-waypoint="{ active: true, callback: onWaypointTitle, options: intersectionTitleOptions }")
       .custom-home-financing__body
         .custom-home-financing__col.custom-home-financing__col--left
-          .custom-home-financing__circle(v-for='content in props.column_left')
+          .custom-home-financing__circle(v-for='content in props.column_left', :class='{ "custom-home-financing__circle--active": fadeCircles}', v-waypoint="{ active: true, callback: onWaypointCircles, options: intersectionCirclesOptions }")
             img.custom-home-financing__icon(:src='content.icon')
             .custom-home-financing__content(v-html='content.content')
         .custom-home-financing__col.custom-home-financing__col--right  

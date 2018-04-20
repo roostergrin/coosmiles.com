@@ -2,17 +2,32 @@
 
 <script>
 import HomeVideoModal from 'components/modal/modal-home-video/modal-home-video'
+import { elFadeUp } from 'components/mixins'
 
 export default {
   props: ['props'],
   data () {
     return {
-      showModal: false
+      showModal: false,
+      fadePhone: false,
+      intersectionPhoneOptions: {
+        root: null,
+        rootMargin: '0px 0px -150px 0px',
+        thresholds: [1]
+      }
     }
   },
   components: {
     HomeVideoModal
-  }
+  },
+  methods: {
+    onWaypointPhone ({ going, direction }) {
+      if (going === this.$waypointMap.GOING_IN) {
+        this.fadePhone = true
+      }
+    }
+  },
+  mixins: [elFadeUp]
 }
 </script>
 

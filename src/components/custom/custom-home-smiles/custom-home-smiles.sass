@@ -6,4 +6,11 @@
 
   &__title
     @extend .title
+    transform: translateY(50px)
+    transition: all 0.6s ease
+    opacity: 0
     margin-bottom: rem-calc(60)
+
+    &--active
+      transform: translateY(0)
+      opacity: 1

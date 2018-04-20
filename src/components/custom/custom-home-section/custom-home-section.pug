@@ -1,10 +1,12 @@
 .custom-home-section
   .custom-home-section__container
-    .custom-home-section__title(v-html='props.title')
+    .custom-home-section__title(v-html='props.title', :class='{ "custom-home-section__title--active": fadeTitle}', v-waypoint="{ active: true, callback: onWaypointTitle, options: intersectionTitleOptions }")
     .custom-home-section__body
       .custom-home-section__content(v-html='props.content')
+      .custom-home-section__seperator(:class='{ "custom-home-section__seperator--active": fadeLine}', v-waypoint="{ active: true, callback: onWaypointLine, options: intersectionLineOptions }")
+        .custom-home-section__orange-line
       .custom-home-section__cta(v-html='props.cta')
-    .custom-home-section__video
+    .custom-home-section__video(:class='{ "custom-home-section__video--active": fadePhone}', v-waypoint="{ active: true, callback: onWaypointPhone, options: intersectionPhoneOptions }")
       .custom-home-section__overlay
         img.custom-home-section__image(:src='props.image', @click='showModal = true')
   
