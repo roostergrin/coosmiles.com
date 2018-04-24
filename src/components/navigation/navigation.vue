@@ -19,6 +19,16 @@ export default {
   components: {
     Icon,
     ComplimentaryExamModal
+  },
+  methods: {
+    resetNavBg () {
+      setTimeout(function () {
+        var scrollClass = document.getElementsByClassName('navigation--scrolled')[0]
+        if (scrollClass) {
+          scrollClass.classList.remove('navigation--scrolled')
+        }
+      }, 100)
+    }
   }
 }
 

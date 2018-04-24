@@ -1,15 +1,15 @@
 nav.navigation(:class="{'navigation--scrolled': $store.state.nav || menu}")
   .navigation__container.navigation__desktop
-    .navigation__icon
+    .navigation__icon(@click='resetNavBg()')
       router-link(to='/')
         Icon(name='logo-coo')
     
-    .navigation__icon.navigation__icon--option
+    .navigation__icon.navigation__icon--option(@click='resetNavBg()')
       router-link(to='/')
         Icon(name='logo-coo-option')
                 
     .navigation__links    
-      span.navigation__link(v-for='nav in props', v-if='nav.navigation')
+      span.navigation__link(v-for='nav in props', v-if='nav.navigation', @click='resetNavBg()')
         router-link(:to='nav.path')
           a {{ nav.name }}
       span.navigation__link.navigation__button(@click='showComplimentaryModal = true')

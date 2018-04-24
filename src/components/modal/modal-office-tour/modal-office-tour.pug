@@ -3,4 +3,15 @@
     .modal-office-tour__container
       .modal-office-tour__close(@click='$emit("closeOfficeTourModal")')
       .modal-office-tour__body
-        .modal-office-tour__image(:style='"background-image: url(" + props.url + ");"')
+        swiper.modal-office-tour__slider(:options='swiperOptionTour', ref='swiper')
+          swiperSlide.modal-office-tour__slide(v-for='(image, i) in props.gallery', :key='i')
+            .modal-office-tour__image(:style='"background-image: url(" + image.url + ");"')
+                
+        .modal-office-tour__pagination-container
+          .modal-office-tour__pagination(slot='pagination')
+            
+        .modal-office-tour__prev-arrow(slot='button-prev')
+          Icon(name='Arrow')      
+        .modal-office-tour__next-arrow(slot='button-next')
+          Icon(name='Arrow')
+          

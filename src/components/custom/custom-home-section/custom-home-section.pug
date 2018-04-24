@@ -10,6 +10,6 @@
       .custom-home-section__overlay
         img.custom-home-section__image(:src='props.image', @click='showModal = true')
   
-  transition(name='fade-in-modal')             
+  transition(name='fade-in-modal')
     HomeVideoModal(:props='props', @closeHomeVideoModal='showModal = false', v-show='showModal')
         

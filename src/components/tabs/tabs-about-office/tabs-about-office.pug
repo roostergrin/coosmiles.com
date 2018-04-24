@@ -6,5 +6,5 @@
       .tabs-about-office__image(v-for='(image, i) in props.gallery', :key='i', :style='"background-image: url(" + image.url + ");"', @click='displayOfficeTourModal(i)')
   
   transition(name='fade-in-modal')  
-    OfficeTourModal(v-show='showModal', :props='modalData', @closeOfficeTourModal='showModal = false')
+    OfficeTourModal(v-if='showModal', :props='props', @closeOfficeTourModal='showModal = false', :index='imageIndex')
       

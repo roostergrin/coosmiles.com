@@ -71,11 +71,19 @@
       font-weight: 400
 
   &__button-container
+    transform: translateY(10px)
+    transition: all 0.8s ease
+    opacity: 0
     text-align: center
+
+    &--active
+      transform: translateY(0)
+      opacity: 1
 
   &__load
     @extend .button
     display: inline-block
+    transition: all 0.8s ease
     margin: rem-calc(32)
     background-color: $c4
     padding: rem-calc(8) rem-calc(32)

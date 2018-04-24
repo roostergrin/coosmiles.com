@@ -49,10 +49,57 @@
   &__body
     margin: 0 auto
 
+  &__slider
+    width: 800px
+
+  &__slide
+    width: 800px
+    height: 420px
+
+  &__pagination-container
+    display: flex
+    position: relative
+    justify-content: center
+
+  &__pagination
+    display: flex
+    position: relative
+
+  &__bullet
+    margin: 24px 4px 0
+    border: 1px solid $c6
+    border-radius: 50%
+    width: 10px
+    height: 10px
+
+    &:focus
+      outline: none
+
+  &__bullet-active
+    background-color: $c6
+
   &__image
-    border-radius: 5px
     background-repeat: no-repeat
     background-position: center
     background-size: cover
-    width: 800px
-    height: 60vh
+    width: 100%
+    height: 100%
+
+  &__prev-arrow, &__next-arrow
+    position: absolute
+    top: 50%
+    width: 21px
+
+    &:focus
+      outline: none
+
+    svg
+      fill: $c4
+
+
+  &__prev-arrow
+    left: 1%
+    transform: rotate(180deg)
+
+  &__next-arrow
+    right: 1%

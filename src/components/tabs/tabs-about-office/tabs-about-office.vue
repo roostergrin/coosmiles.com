@@ -9,7 +9,7 @@ export default {
   data () {
     return {
       showModal: false,
-      modalData: false
+      imageIndex: false
     }
   },
   components: {
@@ -18,7 +18,7 @@ export default {
   methods: {
     displayOfficeTourModal (i) {
       this.showModal = true
-      this.modalData = this.props.gallery[i]
+      this.imageIndex = i
     }
   },
   mixins: [elFadeUp]
