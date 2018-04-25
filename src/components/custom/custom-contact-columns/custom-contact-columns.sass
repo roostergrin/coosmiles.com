@@ -25,8 +25,15 @@
     margin-right: 60px
     margin-left: 60px
 
+    @media screen and (max-width: $screen-sm)
+      margin: rem-calc(40) rem-calc(16)
+
   &__col-left, &__col-center, &__col-right
     @extend .col-sm-4
+
+  &__col-right
+    @media screen and (max-width: $screen-sm)
+      margin-top: rem-calc(48)
 
   &__phone, &__email, &__hours, &__location
     display: flex
