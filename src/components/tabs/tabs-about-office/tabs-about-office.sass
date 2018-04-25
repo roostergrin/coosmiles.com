@@ -6,6 +6,9 @@
     padding-top: rem-calc(60)
     padding-bottom: rem-calc(90)
 
+    @media(max-width: 768px)
+      padding-bottom: 2rem
+
   &__gallery-container
     display: flex
     flex-wrap: wrap
@@ -23,6 +26,9 @@
       transform: translateY(0)
       opacity: 1
 
+    @media(max-width: 768px)
+      text-align: center
+
   &__image
     margin: 6px 0.2%
     border-radius: 20px
@@ -31,3 +37,7 @@
     background-size: cover
     width: 32.9%
     height: 350px
+
+    @media(max-width: 768px)
+      margin: 12px
+      width: 95%
