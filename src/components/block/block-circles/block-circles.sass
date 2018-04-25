@@ -6,9 +6,16 @@
     margin-left: auto
     max-width: 89rem
 
+    @media screen and (max-width: $screen-sm)
+      text-align: center
+
   &__circle
     @extend .col-sm-3
     padding: 0
+
+    @media screen and (max-width: $screen-sm)
+      display: inline-block
+      width: 75%
 
     &:hover
       cursor: pointer
