@@ -16,7 +16,7 @@ export default {
         loop: true,
         speed: 1500,
         autoplay: {
-          delay: 150000
+          delay: 5000
         },
         navigation: {
           nextEl: '.custom-home-reviews__next-arrow',

@@ -1,7 +1,7 @@
 .tabs-treatment-options
   .tabs-treatment-options__bg
     .tabs-treatment-options__container
-      .tabs-treatment-options__title(v-html='props.title')
+      .tabs-treatment-options__title(v-html='props.title', :class='{ "tabs-treatment-options__title--active": fadeTitle}', v-waypoint="{ active: true, callback: onWaypointTitle, options: intersectionTitleOptions }")
     .tabs-treatment-options__treatment-container
       .tabs-treatment-options__treatment(v-for='treatment in props.treatment')
         .tabs-treatment-options__treatment--overlay(style="background-image: url(static/CircleOverlay.svg)")

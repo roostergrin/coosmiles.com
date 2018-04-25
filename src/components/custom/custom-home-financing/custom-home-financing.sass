@@ -11,13 +11,17 @@
   &__title
     @extend .title
     transform: translateY(10px)
-    transition: all 0.6s ease
+    transition: all 0.8s ease
     opacity: 0
     margin-bottom: rem-calc(60)
 
     &--active
       transform: translateY(0)
       opacity: 1
+
+    @media(max-width: 768px)
+      margin-bottom: 2rem
+      text-align: center
 
   &__col
     &--left
@@ -26,12 +30,16 @@
       display: flex
       padding-top: rem-calc(60)
 
+      @media(max-width: 768px)
+        display: block
+        padding-top: 0
+
     &--right
       @extend .col-sm-5
 
   &__circle
     transform: translateY(10px)
-    transition: all 0.6s ease
+    transition: all 0.8s ease
     opacity: 0
     margin: 1rem
     border-radius: 50%
@@ -41,9 +49,13 @@
     height: 220px
     text-align: center
 
+    @media(max-width: 768px)
+      margin: 1rem auto
+
     &--active
       transform: translateY(0)
       opacity: 0.8
+
 
   &__icon
     width: 65px
@@ -58,3 +70,6 @@
       color: $c3
       font-size: 22px
       font-weight: 600
+
+      @media(max-width: 768px)
+        font-size: 18px

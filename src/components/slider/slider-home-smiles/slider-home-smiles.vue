@@ -24,6 +24,11 @@ export default {
         navigation: {
           nextEl: '.slider-home-smiles__next-arrow',
           prevEl: '.slider-home-smiles__prev-arrow'
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 1
+          }
         }
       }
     }

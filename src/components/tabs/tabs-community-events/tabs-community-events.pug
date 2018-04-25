@@ -1,6 +1,6 @@
 .tabs-community-events
   .tabs-community-events__bg
     .tabs-community-events__container
-      .tabs-community-events__title(v-html='props.title')
+      .tabs-community-events__title(v-html='props.title', :class='{ "tabs-community-events__title--active": fadeTitle}', v-waypoint="{ active: true, callback: onWaypointTitle, options: intersectionTitleOptions }")
     .tabs-community-events__event-container
     BlockCircles

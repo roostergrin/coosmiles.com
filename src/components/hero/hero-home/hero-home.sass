@@ -2,14 +2,23 @@
   &__slider
     height: 100vh
 
+    @media(max-width: 768px)
+      height: 50vh
+
   &__slide
     height: 100vh
+
+    @media(max-width: 768px)
+      height: 50vh
 
   &__image
     background-repeat: no-repeat
     background-position: center
     background-size: cover
     height: 100vh
+
+    @media(max-width: 768px)
+      height: 50vh
 
   &__container
     position: absolute
@@ -21,16 +30,24 @@
     z-index: 95
     text-align: center
 
+    @media(max-width: 768px)
+      top: 28%
+
   &__title
     @extend h1
     transform: translateY(10px)
-    transition: all 0.8s ease
+    transition: all 1s ease
     opacity: 0
     margin-bottom: rem-calc(36)
     text-transform: uppercase
     letter-spacing: 2px
     color: $c1
     font-weight: 600
+
+    @media(max-width: 768px)
+      margin-bottom: 25px
+      width: 240px
+      font-size: 20px
 
     &--active
       transform: translateY(0)
@@ -39,3 +56,6 @@
   &__button
     @extend .button
     transition: all 0.8s ease
+
+    @media(max-width: 768px)
+      font-size: 12px

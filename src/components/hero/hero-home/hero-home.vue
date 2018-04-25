@@ -30,7 +30,14 @@ export default {
     swiper,
     swiperSlide
   },
-  mixins: [elFadeUp]
+  mixins: [elFadeUp],
+  updated () {
+    if (this.showComplimentaryModal === true) {
+      document.body.classList.add('modal-open')
+    } else {
+      document.body.classList.remove('modal-open')
+    }
+  }
 }
 </script>
 

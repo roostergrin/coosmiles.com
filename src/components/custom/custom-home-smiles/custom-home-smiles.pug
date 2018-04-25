@@ -3,7 +3,3 @@
     .custom-home-smiles__title(v-html='props.title', :class='{ "custom-home-smiles__title--active": fadeTitle}', v-waypoint="{ active: true, callback: onWaypointTitle, options: intersectionTitleOptions }")
       
     SliderHomeSmiles(:props='props.gallery')
-      
-    //- .custom-home-smiles__slider
-    //-   .custom-home-smiles__slide(v-for='slide in props.gallery')  
-    //-     img(:src='slide.url')
