@@ -1,7 +1,7 @@
 .custom-before-after
   .custom-before-after__bg
     .custom-before-after__container 
-      .custom-before-after__title(v-html='props.title')
+      .custom-before-after__title(v-html='props.title', :class='{ "custom-before-after__title--active": fadeTitle}', v-waypoint="{ active: true, callback: onWaypointTitle, options: intersectionTitleOptions }")
       .custom-before-after__gallery-container
         .custom-before-after__patient(v-for='patient in props.patient')
           .custom-before-after__patient--name(v-html='patient.name')

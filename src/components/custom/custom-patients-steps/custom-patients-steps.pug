@@ -1,12 +1,12 @@
 .custom-patients-steps
   .custom-patients-steps__bg
     .custom-patients-steps__container
-      .custom-patients-steps__title(v-html='props.title')
+      .custom-patients-steps__title(v-html='props.title', :class='{ "custom-patients-steps__title--active" : fadeTitle }', v-waypoint="{ active: true, callback: onWaypointTitle, options: intersectionTitleOptions }")
       .custom-patients-steps__steps
-        .custom-patients-steps__step(v-for='(step, i) in props.steps', :key='i')
+        .custom-patients-steps__step(v-for='(step, i) in props.steps', :key='i', :class='{ "custom-patients-steps__step--active": fadeStep >= i}', v-waypoint="{ active: true, callback: onWaypointStep, options: intersectionStepOptions }")
           .custom-patients-steps__number {{ i+1 }}
           .custom-patients-steps__content(v-html='step.step')
-        .custom-patients-steps__seperator
+        .custom-patients-steps__seperator(:class='{ "custom-patients-steps__seperator--active": fadeLine}', v-waypoint="{ active: true, callback: onWaypointLine, options: intersectionLineOptions }")
           .custom-patients-steps__orange-line
         
         

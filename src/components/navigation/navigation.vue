@@ -29,6 +29,13 @@ export default {
         }
       }, 100)
     }
+  },
+  updated () {
+    if (this.showComplimentaryModal === true) {
+      document.body.classList.add('modal-open')
+    } else {
+      document.body.classList.remove('modal-open')
+    }
   }
 }
 

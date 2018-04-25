@@ -6,7 +6,7 @@ nav.navigation(:class="{'navigation--scrolled': $store.state.nav || menu}")
     
     .navigation__icon.navigation__icon--option(@click='resetNavBg()')
       router-link(to='/')
-        Icon(name='logo-coo-option')
+        Icon(name='logo-coo-options')
                 
     .navigation__links    
       span.navigation__link(v-for='nav in props', v-if='nav.navigation', @click='resetNavBg()')
@@ -33,5 +33,5 @@ nav.navigation(:class="{'navigation--scrolled': $store.state.nav || menu}")
     .navigation__link.navigation__link--mobile(v-for='nav in props', v-if='nav.navigation', @click='menu = false')
       router-link(:to='nav.path') {{ nav.name }}
       
-    .navigation__link.navigation__link--mobile.navigation__button
+    .navigation__link.navigation__link--mobile.navigation__button(@click='showComplimentaryModal = true, menu = false')
       | Complimentary Exam  

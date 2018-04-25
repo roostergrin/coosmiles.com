@@ -7,10 +7,13 @@
   &__title
     @extend .title
     transform: translateY(10px)
-    transition: all 0.6s ease
+    transition: all 0.8s ease
     opacity: 0
     margin-bottom: rem-calc(60)
 
     &--active
       transform: translateY(0)
       opacity: 1
+
+    @media(max-width: 768px)
+      text-align: center
