@@ -9,5 +9,5 @@
             .block-circles__circle--content(v-html='circle.acf.events.snippet')
   
   .block-circles__button-container(:class=' {"block-circles__button-container--active" : fadeLoad }', v-waypoint="{ active: true, callback: onWaypointLoad, options: intersectionLoadOptions }")
-    .block-circles__load(@click='load', v-show='Object.keys(props).length >= counter')
+    .block-circles__load(@click='load', v-show='Object.keys(props).length > counter + 1')
       | Load More            

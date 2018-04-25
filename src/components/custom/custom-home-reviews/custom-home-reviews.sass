@@ -1,17 +1,29 @@
 .custom-home-reviews
+  @media(max-width: 768px)
+    margin-top: -90px
 
   &__slider
     position: relative
     height: 85vh
 
+    @media(max-width: 768px)
+      height: 100vh
+
   &__slide
     height: 85vh
+
+    @media(max-width: 768px)
+      height: 100vh
 
   &__image
     background-repeat: no-repeat
     background-position: center
     background-size: cover
     height: 85vh
+
+    @media(max-width: 768px)
+      background-image: none !important
+      height: 100vh
 
   &__bg
     background-position: center center
@@ -28,15 +40,17 @@
     width: 100%
     max-width: 100%
 
-
   &__title
     @extend .title
     transform: translateY(10px)
-    transition: all 0.6s ease
+    transition: all 0.8s ease
     opacity: 0
     margin: 0 auto
     margin-bottom: rem-calc(32)
     max-width: 71.25rem
+
+    @media(max-width: 768px)
+      text-align: center
 
     &--active
       transform: translateY(0)
@@ -53,8 +67,18 @@
     background: $c8-background
     padding: 24px 48px
 
+    @media(max-width: 768px)
+      transform: translateY(40%)
+      opacity: 1
+      background: none
+
     &--active
+      transform: translateY(80%)
       opacity: 0
+
+      @media(max-width: 768px)
+        transform: translateY(40%)
+        opacity: 1
 
 
     &--text
@@ -85,8 +109,22 @@
   &__next-arrow
     top: 340px
     right: 17.5%
+    transition: all 0.8s ease
+
+    &--active
+      top: 360px
+
+    @media(max-width: 768px)
+      right: 1%
 
   &__prev-arrow
     top: 335px
     left: 42.5%
     transform: rotate(180deg)
+    transition: all 0.8s ease
+
+    &--active
+      top: 355px
+
+    @media(max-width: 768px)
+      left: 1%

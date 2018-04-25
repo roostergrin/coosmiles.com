@@ -1,7 +1,7 @@
 .custom-contact-columns(v-if='props')
   .custom-contact-columns__bg
-    .custom-contact-columns__container
-      .custom-contact-columns__title(v-html='props.title')
+    .custom-contact-columns__container     
+      .custom-contact-columns__title(v-html='props.title', :class='{ "custom-contact-columns__title--active": fadeTitle}', v-waypoint="{ active: true, callback: onWaypointTitle, options: intersectionTitleOptions }")
       .custom-contact-columns__row
         .custom-contact-columns__col-left
           .custom-contact-columns__phone

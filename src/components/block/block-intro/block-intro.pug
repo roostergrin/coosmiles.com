@@ -1,7 +1,7 @@
 .block-intro
   .block-intro__bg
     .block-intro__container
-      .block-intro__title(v-html='props.title')
+      .block-intro__title(v-html='props.title', :class='{ "block-intro__title--active": fadeTitle}', v-waypoint="{ active: true, callback: onWaypointTitle, options: intersectionTitleOptions }")
       .block-intro__content(v-html='props.content')
-      .block-intro__seperator
+      .block-intro__seperator(:class='{ "block-intro__seperator--active": fadeLine}', v-waypoint="{ active: true, callback: onWaypointLine, options: intersectionLineOptions }")
         .block-intro__orange-line

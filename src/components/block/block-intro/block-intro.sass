@@ -10,9 +10,16 @@
 
   &__title
     @extend .title
+    transform: translateY(10px)
+    transition: all 0.8s ease
+    opacity: 0
 
     &--option
       @extend .title--option
+
+    &--active
+      transform: translateY(0)
+      opacity: 1
 
   &__content
     margin: 4rem 6rem 2rem
@@ -20,7 +27,14 @@
   &__seperator
     display: flex
     justify-content: center
+    transform: translateY(10px)
+    transition: all 0.8s ease
+    opacity: 0
     margin-top: 2rem
+
+    &--active
+      transform: translateY(0)
+      opacity: 1
 
   &__orange-line
     background: $c3

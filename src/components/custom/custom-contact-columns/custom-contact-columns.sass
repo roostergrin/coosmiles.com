@@ -8,9 +8,16 @@
 
   &__title
     @extend .title
+    transform: translateY(10px)
+    transition: all 0.8s ease
+    opacity: 0
 
     &--option
       @extend .title--option
+
+    &--active
+      transform: translateY(0)
+      opacity: 1
 
   &__row
     @extend .row
@@ -18,8 +25,15 @@
     margin-right: 60px
     margin-left: 60px
 
+    @media screen and (max-width: $screen-sm)
+      margin: rem-calc(40) rem-calc(16)
+
   &__col-left, &__col-center, &__col-right
     @extend .col-sm-4
+
+  &__col-right
+    @media screen and (max-width: $screen-sm)
+      margin-top: rem-calc(48)
 
   &__phone, &__email, &__hours, &__location
     display: flex
@@ -38,25 +52,25 @@
 
   &__phone
     &--icon
-      padding: 13px
+      padding: 14px
     &--number
       a
         color: $c7
 
   &__email
     &--icon
-      padding: 16px 12px 8px
+      padding: 16px 14px
     &--address
       a
         color: $c7
 
   &__hours
     &--icon
-      padding: 10px
+      padding: 12px
 
   &__location
     &--icon
-      padding: 12px 16px
+      padding: 14px 17px
     &--address
       color: $c7
 

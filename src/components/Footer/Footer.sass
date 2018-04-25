@@ -19,6 +19,9 @@
     @extend .col-sm-4
     display: flex
 
+    @media(max-width: 768px)
+      justify-content: center
+
   &__phone-icon, &__email-icon, &__facebook-icon, &__instagram-icon
     transition: all .4s ease
     margin: 0 0.4rem
@@ -56,12 +59,19 @@
     svg
       width: 220px
 
+      @media(max-width: 768px)
+        display: block
+        margin: 0 auto
+
   &__address, &__phone-number
     display: block
     margin-bottom: 12px
     color: $c1
     font-size: 16px
     font-weight: 600
+
+    @media(max-width: 768px)
+      text-align: center
 
   &__copyright
     @extend .col-sm-offset-8

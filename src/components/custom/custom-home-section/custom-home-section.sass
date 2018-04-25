@@ -7,9 +7,13 @@
   &__title
     @extend .title
     transform: translateY(10px)
-    transition: all 0.6s ease
+    transition: all 0.8s ease
     opacity: 0
     margin-bottom: rem-calc(60)
+
+    @media(max-width: 768px)
+      margin-bottom: 2.5rem
+      text-align: center
 
     &--active
       transform: translateY(0)
@@ -28,16 +32,24 @@
     font-family: $font-option
     font-size: 28px
 
+  &__overlay
+    @media(max-width: 768px)
+      display: flex
+      justify-content: center
+      margin-top: 3rem
+
   &__video
     @extend .col-sm-4
-    transform: translateX(50px)
+    transform: translateX(25px)
     transition: all 0.6s ease
     opacity: 0
+
+    @media(max-width: 768px)
+      transform: translateX(0)
 
     &--active
       transform: translateX(0)
       opacity: 1
-
 
   &__image
     transition: all 0.6s ease
@@ -49,6 +61,9 @@
     &:hover
       box-shadow: 10px 9px 24px 0 rgba(133, 133, 134, 0.3)
 
+    @media(max-width: 768px)
+      margin-top: 0
+
   &__seperator
     display: flex
     justify-content: center
@@ -57,6 +72,9 @@
     opacity: 0
     margin-top: 2rem
     margin-bottom: 4rem
+
+    @media(max-width: 768px)
+      margin-top: 48px
 
     &--active
       transform: translateY(0)

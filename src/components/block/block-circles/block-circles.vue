@@ -27,6 +27,10 @@ export default {
         this.fadeLoad = true
       }
     }
+  },
+  updated () {
+    console.log(this.counter)
+    console.log(Object.keys(this.props).length)
   }
 }
 </script>

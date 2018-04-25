@@ -10,6 +10,13 @@
 
   &__title
     @extend .title
+    transform: translateY(10px)
+    transition: all 0.8s ease
+    opacity: 0
+
+    &--active
+      transform: translateY(0)
+      opacity: 1
 
     &--option
       @extend .title--option
@@ -20,6 +27,9 @@
 
   &__step
     display: flex
+    transform: translateY(10px)
+    transition: all 0.8s ease
+    opacity: 0
     margin: 2.6rem 0
 
     &:first-child > .custom-patients-steps__content
@@ -30,6 +40,10 @@
 
     &:nth-child(3)> .custom-patients-steps__content
       margin-top: 8px
+
+    &--active
+      transform: translateY(0)
+      opacity: 1
 
   &__number
     display: inline-flex
@@ -48,7 +62,14 @@
   &__seperator
     display: flex
     justify-content: center
+    transform: translateY(10px)
+    transition: all 0.8s ease
+    opacity: 0
     margin-top: 2rem
+
+    &--active
+      transform: translateY(0)
+      opacity: 1
 
   &__orange-line
     background: $c3
