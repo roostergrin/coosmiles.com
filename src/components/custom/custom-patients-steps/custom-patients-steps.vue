@@ -20,7 +20,6 @@ export default {
     onWaypointStep ({ going, direction }) {
       if (going === this.$waypointMap.GOING_IN) {
         this.fadeStep += 1
-        console.log(this.fadeStep)
       }
     }
   }

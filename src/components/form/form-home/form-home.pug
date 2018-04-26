@@ -17,4 +17,5 @@
         input.form-home__input(name='phone', v-model='phone', v-validate='{required: true, regex: /^[2-9]\\d{2}-\\d{3}-\\d{4}$/}', :class="{ 'input': true, 'form-home__input--error': errors.has('phone') }", type='phone', placeholder='Phone Number')
       .form-home__group
         input.form-home__input(name='email', v-model='email', v-validate="'required|email'", :class="{ 'input': true, 'form-home__input--error': errors.has('email') }", placeholder='Email Address')
-      input.form-home__submit-button(type='submit')
+      .form-home__submit-button-container
+        input.form-home__submit-button(type='submit')

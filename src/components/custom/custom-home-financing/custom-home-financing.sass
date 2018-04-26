@@ -31,7 +31,6 @@
       padding-top: rem-calc(60)
 
       @media(max-width: 768px)
-        display: block
         padding-top: 0
 
     &--right
@@ -51,6 +50,8 @@
 
     @media(max-width: 768px)
       margin: 1rem auto
+      width: 140px
+      height: 140px
 
     &--active
       transform: translateY(0)
@@ -61,10 +62,20 @@
     width: 65px
     height: 80px
 
+    @media(max-width: 768px)
+      width: 40px
+      height: 40px
+
   &__content
     text-transform: uppercase
     color: $c5
     font-size: 16px
+
+    @media(max-width: 768px)
+      position: relative
+      right: 30px
+      width: 140px
+      font-size: 14px
 
     span
       color: $c3
@@ -72,4 +83,4 @@
       font-weight: 600
 
       @media(max-width: 768px)
-        font-size: 18px
+        font-size: 14px

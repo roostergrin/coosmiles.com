@@ -12,6 +12,9 @@
     padding-bottom: rem-calc(128)
     height: 100%
 
+    @media(max-width: 768px)
+      padding: 0
+
   &__container
     @extend .container-fluid
     display: flex
@@ -22,6 +25,12 @@
     background-size: cover
     max-width: 55rem
     height: 75vh
+
+    @media(max-width: 768px)
+      margin: 0
+      background: $c1
+      padding: 0
+      height: 100vh
 
   &__close
     position: absolute

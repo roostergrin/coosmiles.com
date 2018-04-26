@@ -12,6 +12,9 @@
     padding-bottom: rem-calc(128)
     height: 100%
 
+    @media(max-width: 768px)
+      padding: 0
+
   &__container
     @extend .container-fluid
     display: flex
@@ -23,6 +26,9 @@
     background-size: cover
     max-width: 55rem
     height: 75vh
+
+    @media(max-width: 768px)
+      height: 100vh
 
   &__close
     position: absolute
@@ -52,9 +58,16 @@
   &__slider
     width: 775px
 
+    @media(max-width: 768px)
+      width: 320px
+
   &__slide
     width: 775px
     height: 420px
+
+    @media(max-width: 768px)
+      width: 320px
+      height: 300px
 
   &__pagination-container
     display: flex

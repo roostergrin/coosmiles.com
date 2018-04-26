@@ -8,6 +8,9 @@
     padding-top: rem-calc(60)
     padding-bottom: rem-calc(90)
 
+    @media(max-width: 768px)
+      padding-bottom: 2rem
+
   &__title
     @extend .title
     transform: translateY(10px)
@@ -20,6 +23,9 @@
 
     &--option
       @extend .title--option
+
+    @media(max-width: 768px)
+      text-align: center
 
   &__steps
     margin: 0 auto
