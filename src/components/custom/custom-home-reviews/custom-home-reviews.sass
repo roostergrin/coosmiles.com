@@ -4,13 +4,13 @@
 
   &__slider
     position: relative
-    height: 85vh
+    height: 600px
 
     @media(max-width: 768px)
       height: 100vh
 
   &__slide
-    height: 85vh
+    height: 600px
 
     @media(max-width: 768px)
       height: 100vh
@@ -19,7 +19,7 @@
     background-repeat: no-repeat
     background-position: center
     background-size: cover
-    height: 85vh
+    height: 600px
 
     @media(max-width: 768px)
       background-image: none !important
@@ -36,7 +36,6 @@
     margin-right: auto
     margin-left: auto
     padding-top: rem-calc(80)
-    padding-bottom: rem-calc(80)
     width: 100%
     max-width: 100%
 
@@ -60,7 +59,8 @@
     @extend .col-sm-5
     @extend .col-sm-offset-5
     position: relative
-    transform: translateY(75%)
+    top: 240px
+    // transform: translateY(75%)
     transition: all 0.8s ease-in-out
     opacity: 0.64
     border-radius: 20px
@@ -73,7 +73,8 @@
       background: none
 
     &--active
-      transform: translateY(80%)
+      // transform: translateY(80%)
+      top: 255px
       opacity: 0
 
       @media(max-width: 768px)
@@ -95,7 +96,7 @@
 
   &__next-arrow, &__prev-arrow
     position: absolute
-    transition: all 0.4s ease
+    transition: all 0.8s ease
     opacity: 1
     z-index: 999
     width: 21px
@@ -107,24 +108,25 @@
       opacity: 0
 
   &__next-arrow
-    top: 240px
+    top: 315px
     right: 17.5%
     transition: all 0.8s ease
 
     &--active
-      top: 260px
+      top: 335px
+      transition: all 0.8s ease
 
     @media(max-width: 768px)
       right: 1%
 
   &__prev-arrow
-    top: 235px
+    top: 310px
     left: 42.5%
     transform: rotate(180deg)
     transition: all 0.8s ease
 
     &--active
-      top: 235px
+      top: 255px
 
     @media(max-width: 768px)
       left: 1%
