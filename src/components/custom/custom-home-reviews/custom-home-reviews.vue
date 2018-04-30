@@ -1,4 +1,4 @@
-s<template lang="pug" src="./custom-home-reviews.pug"></template>
+<template lang="pug" src="./custom-home-reviews.pug"></template>
 
 <script>
 import Icon from 'components/icon/icon'

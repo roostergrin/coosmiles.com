@@ -1,6 +1,4 @@
 .custom-home-reviews
-  @media(max-width: 768px)
-    margin-top: -90px
 
   &__slider
     position: relative
@@ -10,20 +8,21 @@
       height: 100vh
 
   &__slide
+    background: #c2c0d6
     height: 600px
 
     @media(max-width: 768px)
-      height: 100vh
+      height: 80vh
 
   &__image
     background-repeat: no-repeat
-    background-position: center
-    background-size: cover
+    background-position: left
+    background-size: contain
     height: 600px
 
     @media(max-width: 768px)
       background-image: none !important
-      height: 100vh
+      height: 600px
 
   &__bg
     background-position: center center
@@ -38,6 +37,9 @@
     padding-top: rem-calc(80)
     width: 100%
     max-width: 100%
+
+    @media(max-width: 768px)
+      padding-top: 0
 
   &__title
     @extend .title
@@ -60,7 +62,6 @@
     @extend .col-sm-offset-5
     position: relative
     top: 240px
-    // transform: translateY(75%)
     transition: all 0.8s ease-in-out
     opacity: 0.64
     border-radius: 20px
@@ -68,17 +69,16 @@
     padding: 24px 48px
 
     @media(max-width: 768px)
-      transform: translateY(100%)
+      top: 165px
       opacity: 1
       background: none
 
     &--active
-      // transform: translateY(80%)
       top: 255px
       opacity: 0
 
       @media(max-width: 768px)
-        transform: translateY(100%)
+        top: 165px
         opacity: 1
 
 
@@ -101,6 +101,9 @@
     z-index: 999
     width: 21px
 
+    &:focus
+      outline: none
+
     svg
       fill: $c3
 
@@ -113,10 +116,10 @@
     transition: all 0.8s ease
 
     &--active
-      top: 335px
       transition: all 0.8s ease
 
     @media(max-width: 768px)
+      top: 250px
       right: 1%
 
   &__prev-arrow
@@ -126,7 +129,8 @@
     transition: all 0.8s ease
 
     &--active
-      top: 255px
+      transition: all 0.8s ease
 
     @media(max-width: 768px)
+      top: 245px
       left: 1%
