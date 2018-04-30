@@ -3,9 +3,9 @@
     .tabs-treatment-options__container
       .tabs-treatment-options__title(v-html='props.title', :class='{ "tabs-treatment-options__title--active": fadeTitle}', v-waypoint="{ active: true, callback: onWaypointTitle, options: intersectionTitleOptions }")
     .tabs-treatment-options__treatment-container
-      .tabs-treatment-options__treatment(v-for='treatment in props.treatment')
-        .tabs-treatment-options__treatment--overlay(style="background-image: url(static/CircleOverlay.svg)")
+      .tabs-treatment-options__treatment(v-for='(treatment, i) in props.treatment', :key='i', @click='displayTreatment(i)')
+        .tabs-treatment-options__treatment--overlay(style="background-image: url(static/CircleOverlay.svg)", :class='{ "tabs-treatment-options__treatment--overlay-active": showTreatment === i}')
         .tabs-treatment-options__treatment--image(:style='"background-image: url(" + treatment.image  + ");"')
-          .tabs-treatment-options__treatment--info 
+          .tabs-treatment-options__treatment--info(:class='{ "tabs-treatment-options__treatment--info-active": showTreatment === i }')
             .tabs-treatment-options__treatment--name(v-html='treatment.name')
             .tabs-treatment-options__treatment--content(v-html='treatment.content')

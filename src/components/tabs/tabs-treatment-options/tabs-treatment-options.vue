@@ -5,6 +5,16 @@ import { elFadeUp } from 'components/mixins'
 
 export default {
   props: ['props'],
-  mixins: [elFadeUp]
+  data () {
+    return {
+      showTreatment: false
+    }
+  },
+  mixins: [elFadeUp],
+  methods: {
+    displayTreatment (i) {
+      this.showTreatment = i
+    }
+  }
 }
 </script>

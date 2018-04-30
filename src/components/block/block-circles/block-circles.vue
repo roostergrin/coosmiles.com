@@ -9,6 +9,7 @@ export default {
   },
   data () {
     return {
+      showEvent: false,
       counter: 3,
       fadeLoad: false,
       intersectionLoadOptions: {
@@ -26,6 +27,9 @@ export default {
       if (going === this.$waypointMap.GOING_IN) {
         this.fadeLoad = true
       }
+    },
+    displayEvents (i) {
+      this.showEvent = i
     }
   }
 }

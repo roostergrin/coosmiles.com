@@ -5,6 +5,16 @@ import { elFadeUp } from 'components/mixins'
 
 export default {
   props: ['props'],
-  mixins: [elFadeUp]
+  data () {
+    return {
+      showBio: false
+    }
+  },
+  mixins: [elFadeUp],
+  methods: {
+    displayBio (i) {
+      this.showBio = i
+    }
+  }
 }
 </script>
