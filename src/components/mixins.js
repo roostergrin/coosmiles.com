@@ -5,12 +5,12 @@ export const elFadeUp = {
       fadeLine: false,
       intersectionTitleOptions: {
         root: null,
-        rootMargin: '0px 0px -50px 0px',
+        rootMargin: '0px 0px -25px 0px',
         thresholds: [1]
       },
       intersectionLineOptions: {
         root: null,
-        rootMargin: '0px 0px -50px 0px',
+        rootMargin: '0px 0px -25px 0px',
         thresholds: [1]
       }
     }

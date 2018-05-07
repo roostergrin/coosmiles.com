@@ -22,6 +22,7 @@
   &__body
     @extend .col-sm-7
     @extend .col-sm-offset-1
+    padding: 0
 
   &__content
     position: relative
@@ -70,7 +71,7 @@
     transform: translateY(10px)
     transition: all 0.8s ease
     opacity: 0
-    margin-top: 2rem
+    margin-top: rem-calc(30)
     margin-bottom: 4rem
 
     @media(max-width: 768px)
