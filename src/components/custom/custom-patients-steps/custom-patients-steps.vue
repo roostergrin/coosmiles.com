@@ -10,7 +10,7 @@ export default {
       fadeStep: -1,
       intersectionStepOptions: {
         root: null,
-        rootMargin: '0px 0px -50px 0px',
+        rootMargin: '0px 0px -25px 0px',
         thresholds: [1]
       }
     }

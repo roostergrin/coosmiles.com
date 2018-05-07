@@ -16,7 +16,7 @@ export default {
         loop: true,
         speed: 1500,
         autoplay: {
-          delay: 50000
+          delay: 5000
         },
         navigation: {
           nextEl: '.custom-home-reviews__next-arrow',
@@ -30,14 +30,16 @@ export default {
             for (var i = 0; i < addEffect.length; i++) {
               addEffect[i].classList.add('custom-home-reviews__testimonial--active')
             }
+            setTimeout(function () {
+              var removeEffect = document.getElementsByClassName('custom-home-reviews__testimonial')
+              for (var j = 0; j < removeEffect.length; j++) {
+                removeEffect[j].classList.remove('custom-home-reviews__testimonial--active')
+              }
+            }, 1000)
           },
           slideChangeTransitionEnd: function () {
             this.$el[0].children[1].classList.remove('custom-home-reviews__next-arrow--active')
             this.$el[0].children[2].classList.remove('custom-home-reviews__prev-arrow--active')
-            var removeEffect = document.getElementsByClassName('custom-home-reviews__testimonial')
-            for (var j = 0; j < removeEffect.length; j++) {
-              removeEffect[j].classList.remove('custom-home-reviews__testimonial--active')
-            }
           }
         }
       }

@@ -13,7 +13,7 @@ export default {
         slidesPerView: 1,
         loop: true,
         speed: 1500,
-        // effect: 'cube',
+        effect: 'cube',
         autoplay: {
           delay: 3000
         }
