@@ -18,13 +18,13 @@
   &__container
     @extend .container-fluid
     display: flex
-    align-items: center
+    align-items: flex-end
     background: $c2
     background-repeat: no-repeat
     background-position: center
     background-size: cover
-    max-width: 55rem
-    height: 75vh
+    max-width: 45rem
+    height: 60vh
 
     @media(max-width: 768px)
       margin: 0
@@ -55,7 +55,7 @@
       transform: rotate(-45deg)
 
   &__body
-    margin: 0 auto
+    margin: 0 auto 1rem
 
   &__video
     width: 100%
