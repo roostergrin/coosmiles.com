@@ -38,18 +38,42 @@
       flex-wrap: wrap
       justify-content: center
 
+  &__selector
+    &:first-child
+      .tabs-about-doctor__icon-circle
+        padding: 12px 8px
+
+    &:nth-child(2)
+      .tabs-about-doctor__icon-circle
+        padding: 12px 10px
+
+    &:nth-child(3)
+      .tabs-about-doctor__icon-circle
+        padding: 14px
+        
+    &:last-child
+      .tabs-about-doctor__icon-circle
+        padding: 8px 14px
+
   &__bio-content
     margin: 2rem 0
 
     @media(max-width: 768px)
       margin-top: -60px
 
+    ul
+      color: $c3
+
+      span
+        color: $c11
+
   &__icon-circle
     transition: all 0.8s ease
     margin: 1.6rem 2rem 0.8rem
     border: 2px solid $c6
     border-radius: 50%
-    padding: 1rem
+    width: 50px
+    height: 50px
 
     &--active
       transition: all 0.8s ease
@@ -57,8 +81,6 @@
 
   &__icon
     transition: all 0.8s ease
-    width: 20px
-    height: 20px
 
     svg
       fill: $c6
@@ -67,6 +89,7 @@
       svg
         transition: all 0.8s ease
         fill: $c3
+
 
   &__label
     transition: all 0.8s ease

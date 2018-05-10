@@ -10,7 +10,7 @@
           input(type='hidden' name='_wpcf7_unit_tag' value='wpcf7-f278-o1')
           input(type='hidden' name='_wpcf7_container_post' value='0')
       .form-home__group
-        textarea.form-home__textarea(name='message', v-model='message', v-validate="'required|alpha'", :class="{ 'form-home__input--error': errors.has('message') }", type='text', placeholder='Ask any questions and share your concerns...', rows='6')
+        textarea.form-home__textarea(name='message', v-model='message', v-validate="'required|alpha'", :class="{ 'form-home__input--error': errors.has('message') }", type='text', placeholder='Ask us your finance questions.', rows='6')
       .form-home__group
         input.form-home__input(name='fullname', v-model='fullname', v-validate="'required|alpha'", :class="{ 'form-home__input--error': errors.has('name') }", type='text', placeholder='First and Last Name')
       .form-home__group

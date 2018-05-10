@@ -14,7 +14,7 @@
           .tabs-about-doctor__bio-content(v-for='(bio, j) in props.bio', :key='j', v-if='showBio === j')
             ul
               li.tabs-about-doctor__item(v-for='item in bio.content')
-                | {{ item.item }}
+                span {{ item.item }}
           .tabs-about-doctor__seperator(:class='{ "tabs-about-doctor__seperator--active": fadeLine}', v-waypoint="{ active: true, callback: onWaypointLine, options: intersectionLineOptions }")
             .tabs-about-doctor__orange-line
           

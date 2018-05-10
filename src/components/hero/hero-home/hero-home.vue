@@ -12,10 +12,10 @@ export default {
       swiperOption: {
         slidesPerView: 1,
         loop: true,
-        speed: 1500,
+        speed: 4000,
         effect: 'cube',
         autoplay: {
-          delay: 3000
+          delay: 4000
         }
       }
     }

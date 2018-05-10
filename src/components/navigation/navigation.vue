@@ -22,10 +22,16 @@ export default {
   },
   methods: {
     resetNavBg () {
+      var communityPage = this.$route.path
       setTimeout(function () {
         var scrollClass = document.getElementsByClassName('navigation--scrolled')[0]
-        if (scrollClass) {
-          scrollClass.classList.remove('navigation--scrolled')
+        if (communityPage !== '/community') {
+          if (scrollClass) {
+            scrollClass.classList.remove('navigation--scrolled')
+          }
+        } else {
+          var nonScrollClass = document.getElementsByClassName('navigation')[0]
+          nonScrollClass.classList.add('navigation--scrolled')
         }
       }, 100)
     }

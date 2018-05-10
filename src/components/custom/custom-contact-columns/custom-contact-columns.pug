@@ -12,16 +12,20 @@
             .custom-contact-columns__email--icon
               Icon(name='Email')
             .custom-contact-columns__email--address(v-html='props.email')
-          .custom-contact-columns__hours
-            .custom-contact-columns__hours--icon
-              Icon(name='Clock')
-            .custom-contact-columns__hours--hours(v-html='props.hours')
-            
-        .custom-contact-columns__col-center
+          //- .custom-contact-columns__hours
+          //-   .custom-contact-columns__hours--icon
+          //-     Icon(name='Clock')
+          //-   .custom-contact-columns__hours--hours(v-html='props.hours')
           .custom-contact-columns__location
             .custom-contact-columns__location--icon
               Icon(name='Pin')
             a.custom-contact-columns__location--address(v-html='props.address', :href='props.map_link')
+            
+        .custom-contact-columns__col-center
+          //- .custom-contact-columns__location
+          //-   .custom-contact-columns__location--icon
+          //-     Icon(name='Pin')
+          //-   a.custom-contact-columns__location--address(v-html='props.address', :href='props.map_link')
           .custom-contact-columns__map
             iframe.custom-contact-columns__map--map(:src='props.map_embed_link', width='280', height='280')
               
