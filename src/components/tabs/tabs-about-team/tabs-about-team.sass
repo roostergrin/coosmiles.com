@@ -5,6 +5,9 @@
     padding-top: rem-calc(60)
     padding-bottom: rem-calc(90)
 
+    @media(max-width: 768px)
+      padding-bottom: rem-calc(30)
+
   &__title
     @extend .title
     transform: translateY(10px)
@@ -24,7 +27,7 @@
   &__team-container
     @extend .row
     margin-right: auto
-    margin-bottom: rem-calc(30)
+    margin-bottom: rem-calc(60)
     margin-left: auto
     max-width: 89rem
 
@@ -37,7 +40,6 @@
     padding: 0
 
     @media(max-width: 768px)
-      margin-bottom: 2rem
       padding: 1px
 
     &:hover
