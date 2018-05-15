@@ -12,7 +12,7 @@ export default {
       fadePhone: false,
       intersectionPhoneOptions: {
         root: null,
-        rootMargin: '0px 0px -150px 0px',
+        rootMargin: '0px 0px 0px 0px',
         thresholds: [1]
       }
     }
