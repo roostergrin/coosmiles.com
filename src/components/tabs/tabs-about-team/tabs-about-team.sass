@@ -42,12 +42,13 @@
     @media(max-width: 768px)
       padding: 1px
 
-    &:hover
-      cursor: pointer
-      .tabs-about-team__team-member--overlay
-        opacity: 1
-      .tabs-about-team__team-member--content
-        opacity: 1
+    @media(min-width: 769px)
+      &:hover
+        cursor: pointer
+        .tabs-about-team__team-member--overlay
+          opacity: 1
+        .tabs-about-team__team-member--content
+          opacity: 1
 
     &:nth-child(even)
       transform: translateY(-100px)
@@ -85,18 +86,19 @@
       overflow: hidden
 
     &--content
+      display: flex
       position: absolute
       top: 0
+      flex-direction: column
+      justify-content: center
       transition: all 0.8s ease
       opacity: 0
-      padding: 8rem 4rem
-
-      @media(max-width: 768px)
-        margin-top: -30px
+      background: rgba(59, 59, 60, 0.7)
+      padding: 0 4rem
+      height: 100%
 
     &--content-active
       opacity: 1
-      background: rgba(59, 59, 60, 0.7)
 
     &--name
       margin-bottom: 6px

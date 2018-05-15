@@ -62,17 +62,18 @@
       overflow: hidden
 
     &--info
+      display: flex
       position: absolute
       top: 0
+      flex-direction: column
+      justify-content: center
       transition: all 0.8s ease
       opacity: 0
       border-radius: 50%
       background: rgba(59, 59, 60, 0.7)
-      padding: 8rem 4rem
+      padding: 0 4rem
       width: 100%
-
-      @media(max-width: 768px)
-        padding: 4rem
+      height: 100%
 
     &--info-active
       opacity: 1
