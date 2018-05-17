@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
 </head>
-<body>
+<body class="no-touch">
   <div id="app"></div>
   <?php wp_footer(); ?>
   <script type="text/javascript">
