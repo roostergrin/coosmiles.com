@@ -4,7 +4,7 @@
       .tabs-about-team__title(v-html='props.title', :class='{ "tabs-about-team__title--active": fadeTitle}', v-waypoint="{ active: true, callback: onWaypointTitle, options: intersectionTitleOptions }")
     .tabs-about-team__team-container
       .tabs-about-team__team-member(v-for='(member, i) in props.team_member', @key='i', @click='displayBio(i)')
-        .tabs-about-team__team-member--overlay(style="background-image: url(/static/CircleOverlay.svg)", :class='{ "tabs-about-team__team-member--overlay-active": showBio === i }')
+        .tabs-about-team__team-member--overlay(style="background-image: url(https://coosmiles.com/static/CircleOverlay.svg)", :class='{ "tabs-about-team__team-member--overlay-active": showBio === i }')
         .tabs-about-team__team-member--image(:style='"background-image: url(" + member.image + ");"')
           .tabs-about-team__team-member--content(:class='{ "tabs-about-team__team-member--content-active": showBio === i }')
             .tabs-about-team__team-member--name(v-html='member.name')
