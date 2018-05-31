@@ -10,7 +10,7 @@
           input(type='hidden' name='_wpcf7_unit_tag' value='wpcf7-f270-o1')
           input(type='hidden' name='_wpcf7_container_post' value='0')
       .form-contact__group
-        textarea.form-contact__textarea(name='message', v-model='message', v-validate="'required|alpha'", :class="{ 'form-contact__input--error': errors.has('message') }", type='text', placeholder='Ask any questions and share you concerns.', rows='6')
+        textarea.form-contact__textarea(name='message', v-model='message', v-validate="'required|alpha'", :class="{ 'form-contact__input--error': errors.has('message') }", type='text', placeholder='Ask any questions and share you concerns.', rows='7')
       .form-contact__group
         input.form-contact__input(name='fullname', v-model='fullname', v-validate="'required|alpha'", :class="{ 'form-contact__input--error': errors.has('name') }", type='text', placeholder='First and Last Name')
       .form-contact__group

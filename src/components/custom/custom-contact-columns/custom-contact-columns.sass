@@ -27,45 +27,52 @@
 
   &__row
     @extend .row
-    margin-top: 4rem
+    margin-top: 40px
     margin-right: 60px
     margin-left: 60px
 
     @media screen and (max-width: $screen-sm)
       margin: rem-calc(40) rem-calc(16)
 
-  &__col-left, &__col-center, &__col-right
-    @extend .col-sm-4
+  &__col-left
+    @extend .col-sm-5
+    @extend .col-sm-offset-1
 
   &__col-right
+    @extend .col-sm-5
     @media screen and (max-width: $screen-sm)
       margin-top: rem-calc(48)
+
+  &__info-container
+    // display: flex
+    justify-content: space-evenly
+    margin-bottom: 30px
 
   &__phone, &__email, &__hours, &__location
     display: flex
     align-items: center
-    margin-bottom: 2rem
+    margin-bottom: 8px
 
     &--icon
       margin-right: 1rem
       border-radius: 50%
       background: $c4
-      width: 50px
-      height: 50px
+      width: 40px
+      height: 40px
 
       svg
         fill: $c1
 
   &__phone
     &--icon
-      padding: 14px
+      padding: 12px
     &--number
       a
         color: $c7
 
   &__email
     &--icon
-      padding: 16px 14px
+      padding: 8px 12px
     &--address
       a
         color: $c7
@@ -76,7 +83,7 @@
 
   &__location
     &--icon
-      padding: 14px 17px
+      padding: 12px 14px
     &--address
       color: $c7
 
