@@ -1,12 +1,7 @@
 .hero-home
-  swiper.hero-home__slider(:options='swiperOption')
-    swiperSlide.hero-home__slide
+  .hero-home__slider(:options='swiperOption')
+    .hero-home__slide
       .hero-home__image(style='background-image: url(static/hero-home.jpg)')
-    swiperSlide.hero-home__slide
-      .hero-home__image(style='background-image: url(static/hero-home2.jpg)')
-    swiperSlide.hero-home__slide
-      .hero-home__image(style='background-image: url(static/hero-home3.jpg)')
-      
   .hero-home__container
     .hero-home__waypoint(v-waypoint='{ active: true, callback: scrolled}')
     .hero-home__title(:class='{ "hero-home__title--active": fadeTitle}', v-waypoint="{ active: true, callback: onWaypointTitle, options: intersectionTitleOptions }")
