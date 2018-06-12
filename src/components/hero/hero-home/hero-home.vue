@@ -11,7 +11,12 @@ export default {
       showComplimentaryModal: false,
       swiperOption: {
         slidesPerView: 1,
-        loop: true
+        loop: true,
+        speed: 4000,
+        effect: 'cube',
+        autoplay: {
+          delay: 4000
+        }
       }
     }
   },
