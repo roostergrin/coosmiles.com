@@ -23,7 +23,7 @@
     })();
   </script>
   <!-- BoldChat Visitor Monitor HTML v5.00 (Website=1488 - Central Ohio Orthodontics,ChatButton=1488 - Central Ohio Orthodontics,ChatInvitation=1488 - Central Ohio Orthodontics) -->
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
   window._bcvma = window._bcvma || [];
   _bcvma.push(["setAccountID", "438176494458224912"]); _bcvma.push(["setParameter", "WebsiteID", "435751087274695686"]); _bcvma.push(["setParameter", "InvitationID", "435751087229317678"]); _bcvma.push(["setParameter", "VisitName", ""]); _bcvma.push(["setParameter", "VisitPhone", ""]); _bcvma.push(["setParameter", "VisitEmail", ""]); _bcvma.push(["setParameter", "VisitRef", ""]); _bcvma.push(["setParameter", "VisitInfo", ""]); _bcvma.push(["setParameter", "CustomUrl", ""]); _bcvma.push(["setParameter", "WindowParameters", ""]); _bcvma.push(["addFloat", {type: "chat", id: "435751090068266797"}]); _bcvma.push(["pageViewed"]);
   var bcLoad = function(){
@@ -38,7 +38,25 @@
   </script>
   <noscript>
   <a href="http://www.boldchat.com" title="Live Chat Software" target="_blank"><img alt="Live Chat Software" src="https://vms.boldchat.com/aid/438176494458224912/bc.vmi?wdid=435751087274695686&amp;vr=&amp;vn=&amp;vi=& amp;ve=&amp;vp=&amp;curl=" border="0" width="1" height="1" /></a>
-  </noscript>
+  </noscript> -->
   <!-- /BoldChat Visitor Monitor HTML v5.00 -->
+  <!-- Ruby Chat Code -->
+  <script>
+  window.rubyApi={l:[],t:[],on:function(){this.l.push(arguments)},trigger:function(){this.t.push(arguments)}};
+  (function(){var e="7c1f3aea-7f25-4658-8e19-80e50b17a716";
+  var a=false;
+  var t=document.createElement("script");
+  t.async=true;
+  t.type="text/javascript";
+  t.src="https://chatwidget.ruby.com/"+e;
+  document.getElementsByTagName("HEAD").item(0).appendChild(t);
+  t.onreadystatechange=t.onload=function(t){
+    if(!a&&(!this.readyState||this.readyState=="loaded"||this.readyState=="complete")){
+      if(window.RubyChat)window.RubyChat({c:e});
+      a=true
+    }
+  }})();
+  </script>
+  <!-- End Ruby Chat Code -->
 </body>
 </html>
