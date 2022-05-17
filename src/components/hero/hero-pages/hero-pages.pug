@@ -4,7 +4,7 @@
       .hero-pages__container
         .hero-pages__waypoint(v-waypoint='{ active: true, callback: scrolled}')
         .hero-pages__title(v-html='props.title', :class='{ "hero-pages__title--active": fadeTitle}', v-waypoint="{ active: true, callback: onWaypointTitle, options: intersectionTitleOptions }")
-        a.hero-pages__button(v-html='props.button', @click='showComplimentaryModal = true')
+        a.hero-pages__button(v-if='props.button' v-html='props.button', @click='showComplimentaryModal = true')
           
     transition(name='fade-in-modal') 
       ComplimentaryExamForm(v-show='showComplimentaryModal', @closeComplimentaryModal='showComplimentaryModal = false')
@@ -14,7 +14,7 @@
       .hero-pages__container
         .hero-pages__waypoint(v-waypoint='{ active: true, callback: scrolled}')
         .hero-pages__title(v-html='props.title', :class='{ "hero-pages__title--active": fadeTitle}', v-waypoint="{ active: true, callback: onWaypointTitle, options: intersectionTitleOptions }")
-        a.hero-pages__button(v-html='props.button', @click='showComplimentaryModal = true')
+        a.hero-pages__button(v-if='props.button' v-html='props.button', @click='showComplimentaryModal = true')
           
     transition(name='fade-in-modal') 
       ComplimentaryExamForm(v-show='showComplimentaryModal', @closeComplimentaryModal='showComplimentaryModal = false')
