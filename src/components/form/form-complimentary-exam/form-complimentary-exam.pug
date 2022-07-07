@@ -2,12 +2,12 @@
   .form-complimentary-exam__body
     .form-complimentary-exam__success-message(v-if='formSubmitted')
       h2 Thanks for submitting our form!
-    form.form-complimentary-exam__form(v-if='!formSubmitted', action='https://coosmiles.com/thank-you#wpcf7-f278-o1' novalidate='novalidate' class='wpcf7-form' method='post')
+    form.form-complimentary-exam__form(v-if='!formSubmitted', action='https://coosmiles.com/thank-you' novalidate='novalidate' class='wpcf7-form' method='post')
       div(style='display: none')
-          input(type='hidden' name='_wpcf7' value='278')
-          input(type='hidden' name='_wpcf7_version' value='5.0.1')
+          input(type='hidden' name='_wpcf7' value='684')
+          input(type='hidden' name='_wpcf7_version' value='5.6')
           input(type='hidden' name='_wpcf7_locale' value='en_US')
-          input(type='hidden' name='_wpcf7_unit_tag' value='wpcf7-f278-o1')
+          input(type='hidden' name='_wpcf7_unit_tag' value='wpcf7-f684-o1')
           input(type='hidden' name='_wpcf7_container_post' value='0')
       .form-complimentary-exam__group
         textarea.form-complimentary-exam__textarea(name='message', v-model='message', v-validate="'required|alpha'", :class="{ 'form-home__input--error': errors.has('message') }", type='text', placeholder='How can we help you or your loved ones smile brighter?', rows='6')

@@ -8,6 +8,7 @@ import Treatments from '@/pages/treatments/treatments'
 import Community from '@/pages/community/community'
 import Contact from '@/pages/contact-us/contact-us'
 import Accessibility from '@/pages/accessibility/accessibility'
+import ThankYou from '@/pages/thank-you/thank-you'
 import PageNotFound from '@/pages/404/404'
 
 Vue.use(VueRouter)
@@ -56,6 +57,12 @@ const router = new VueRouter({
       name: 'Accessibility',
       navigation: false,
       component: Accessibility
+    },
+    {
+      path: '/thank-you',
+      name: 'Thank You',
+      navigation: false,
+      component: ThankYou
     },
     {
       path: '/*',
