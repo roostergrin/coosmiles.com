@@ -3,6 +3,17 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="Qqot5NYv4vkvKJKYBjcFX8-8Vh0u3eIeN1gFqscgnZQ" />
+    <link rel="preload" href="https://coosmiles.com/static/hero-home.jpg" as="image">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZB017QQR8B"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZB017QQR8B');
+    </script>   
     <?php wp_head(); ?>
 </head>
 <body class="no-touch">
