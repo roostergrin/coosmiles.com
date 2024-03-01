@@ -10,7 +10,7 @@
           Icon(name='Facebook')
         a.footer__instagram-icon(:href='props.props.acf.footer.instagram_link', target='_blank')
           Icon(name='Instagram')
-      router-link.footer__logo(to='/')
+      router-link.footer__logo(to='/' aria-label='Footer Logo')
         Icon(name='FooterLogo')
       .footer__information
         a.footer__address(v-html='props.props.acf.footer.address', :href='props.props.acf.footer.map_link')
@@ -18,4 +18,5 @@
   .footer__bottom-bg
     .footer__bottom-container
       a.footer__copyright(href='https://www.roostergrin.com/') Online Advantage by Rooster Grin
+  #accessibilityWidget(tabindex='0') Click for Accessibility
           

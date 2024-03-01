@@ -1,7 +1,7 @@
 .slider-home-smiles
   swiper.slider-home-smiles__slider(:options='swiperOption')
     swiperSlide.slider-home-smiles__slide(v-for='(slide, i) in props', :key='i')
-      img(:src='slide.url')
+      img(:src='slide.url' alt='Gallery')
       //- .slider-home-smiles__image(:style='"background-image: url(" + slide.url + ");"')
   
   .slider-home-smiles__pagination-container

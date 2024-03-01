@@ -8,7 +8,7 @@
       .custom-home-section__cta(v-html='props.cta')
     .custom-home-section__video(:class='{ "custom-home-section__video--active": fadePhone}', v-waypoint="{ active: true, callback: onWaypointPhone, options: intersectionPhoneOptions }")
       .custom-home-section__overlay
-        img.custom-home-section__image(:src='props.image', @click='showModal = true')
+        img.custom-home-section__image(:src='props.image', @click='showModal = true' alt='modal')
   
   transition(name='fade-in-modal')
     HomeVideoModal(:props='props', @closeHomeVideoModal='showModal = false', v-show='showModal')
