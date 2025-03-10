@@ -66,8 +66,15 @@
 
   &__button
     @extend .button
+    display: inline-block
     transition: all 0.8s ease
     text-transform: uppercase
+    background: $c4 !important
+    font-size: 1.5rem
+
+  &__button:hover
+    transform: scale(1.1)
+    border: solid 4px $c1
 
     @media(max-width: 768px)
       font-size: 12px
