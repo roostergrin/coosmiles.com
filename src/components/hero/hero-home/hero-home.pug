@@ -14,8 +14,9 @@
     .hero-home__waypoint(v-waypoint='{ active: true, callback: scrolled}')
     .hero-home__title(:class='{ "hero-home__title--active": fadeTitle}', v-waypoint="{ active: true, callback: onWaypointTitle, options: intersectionTitleOptions }")
       | Smile Bright, Shine Brighter
+      | HOW WOULD A NEW SMILE CHANGE YOUR LIFE?
     a.hero-home__button(@click='showComplimentaryModal = true')
-      | SCHEDULE YOUR COMPLIMENTARY EXAM TODAY
+      | BEGIN YOUR SMILE JOURNEY HERE
         
   transition(name='fade-in-modal') 
     ComplimentaryExamForm(v-show='showComplimentaryModal', @closeComplimentaryModal='showComplimentaryModal = false')

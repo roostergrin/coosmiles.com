@@ -2,9 +2,11 @@
   .tabs-about-office__bg
     .tabs-about-office__container
       .tabs-about-office__title(v-html='props.title', :class='{ "tabs-about-office__title--active": fadeTitle}', v-waypoint="{ active: true, callback: onWaypointTitle, options: intersectionTitleOptions }")
-    .tabs-about-office__gallery-container 
+    .tabs-about-office__gallery-container
       .tabs-about-office__image(v-for='(image, i) in props.gallery', :key='i', :style='"background-image: url(" + image.url + ");"', @click='displayOfficeTourModal(i)')
-  
-  transition(name='fade-in-modal')  
+    .tabs-about-office__link
+      a.tabs-about-office__link1(href="/", target="_blank") START YOUR SMILE JOURNEY HERE
+
+  transition(name='fade-in-modal')
     OfficeTourModal(v-if='showModal', :props='props', @closeOfficeTourModal='showModal = false', :index='imageIndex')
-      
+
