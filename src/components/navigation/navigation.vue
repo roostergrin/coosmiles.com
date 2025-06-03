@@ -8,6 +8,11 @@ export default {
   computed: {
     props () {
       return this.$router.options.routes
+    },
+    propsFooter () {
+      return {
+        props: this.$store.state.app['footer']
+      }
     }
   },
   data () {

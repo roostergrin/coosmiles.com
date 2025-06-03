@@ -11,11 +11,15 @@
           input(type='hidden' name='_wpcf7_container_post' value='0')
       .form-contact__group
         textarea.form-contact__textarea(name='message', v-model='message', v-validate="'required|alpha'", :class="{ 'form-contact__input--error': errors.has('message') }", type='text', placeholder='Ask any questions and share you concerns.', rows='7')
-      .form-contact__group
-        input.form-contact__input(name='fullname', v-model='fullname', v-validate="'required|alpha'", :class="{ 'form-contact__input--error': errors.has('name') }", type='text', placeholder='First and Last Name')
+      .form-contact__group.form-contact__grouprow
+        input.form-contact__input(name='fullname', v-model='fullname', v-validate="'required|alpha'", :class="{ 'form-contact__input--error': errors.has('name') }", type='text', placeholder='First  Name')        
+        input.form-contact__input(name='LastName', v-model='LastName', v-validate="'required|alpha'", :class="{ 'form-contact__input--error': errors.has('LastName') }", type='text', placeholder='Last Name')
       .form-contact__group
         input.form-contact__input(name='email', v-model='email', v-validate="'required|email'", :class="{ 'input': true, 'form-contact__input--error': errors.has('email') }", placeholder='Email Address')
       .form-contact__group
         input.form-contact__input(name='phone', v-model='phone', v-validate='{required: true, regex: /^[2-9]\\d{2}-\\d{3}-\\d{4}$/}', :class="{ 'input': true, 'form-contact__input--error': errors.has('phone') }", type='phone', placeholder='Phone Number')
+      .form-contact__group
+        .form-contact__label Date of Birth of Patient
+        input.form-contact__input(name='dob', v-model='dob', v-validate="'required|alpha'", :class="{ 'form-contact__input--error': errors.has('dob') }", type='date')        
       .form-contact__submit-button-container
         input.form-contact__submit-button(type='submit' value='Send')

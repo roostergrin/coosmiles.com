@@ -3,10 +3,19 @@ nav.navigation(:class="{'navigation--scrolled': $store.state.nav || menu}")
     .navigation__icon(@click='resetNavBg()')
       router-link(to='/')
         Icon(name='logo-coo')
+      .navigation__phone.navigation__phonewhite
+        a(:href='propsFooter.props.acf.footer.phone_link')
+          Icon(name='Phone')
+          span(v-html='propsFooter.props.acf.footer.phone_number')        
 
     .navigation__icon.navigation__icon--option(@click='resetNavBg()')
       router-link(to='/')
         Icon(name='logo-coo-options')
+      .navigation__phone
+        a(:href='propsFooter.props.acf.footer.phone_link')
+          Icon(name='Phone')
+          span(v-html='propsFooter.props.acf.footer.phone_number') 
+       
 
     .navigation__links
       span.navigation__link(v-for='nav in props', v-if='nav.navigation', @click='resetNavBg()')
@@ -22,10 +31,14 @@ nav.navigation(:class="{'navigation--scrolled': $store.state.nav || menu}")
     .navigation__icon(@click='menu = false')
       router-link(to='/')
         Icon(name='logo-coo')
+      .navigation__phone.navigation__phonewhite
+        a(:href='propsFooter.props.acf.footer.phone_link')
+          Icon(name='Phone')
+          span(v-html='propsFooter.props.acf.footer.phone_number')         
 
     .navigation__icon.navigation__icon--option(@click='menu = false')
       router-link(to='/')
-        Icon(name='logo-coo-options')
+        Icon(name='logo-coo-options')        
 
     .navigation__menu(@click='menu ? menu = false : menu = true') MENU
 

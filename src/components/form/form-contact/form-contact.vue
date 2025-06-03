@@ -6,8 +6,10 @@ export default {
     return {
       message: '',
       fullname: '',
+      LastName: '',
       email: '',
       phone: '',
+      dob: '',
       formSubmitted: false
     }
   },
