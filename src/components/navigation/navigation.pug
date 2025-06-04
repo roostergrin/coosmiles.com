@@ -2,19 +2,12 @@ nav.navigation(:class="{'navigation--scrolled': $store.state.nav || menu}")
   .navigation__container.navigation__desktop
     .navigation__icon(@click='resetNavBg()')
       router-link(to='/')
-        Icon(name='logo-coo')
-      .navigation__phone.navigation__phonewhite
-        a(:href='propsFooter.props.acf.footer.phone_link')
-          Icon(name='Phone')
-          span(v-html='propsFooter.props.acf.footer.phone_number')        
+        Icon(name='logo-coo')       
 
     .navigation__icon.navigation__icon--option(@click='resetNavBg()')
       router-link(to='/')
         Icon(name='logo-coo-options')
-      .navigation__phone
-        a(:href='propsFooter.props.acf.footer.phone_link')
-          Icon(name='Phone')
-          span(v-html='propsFooter.props.acf.footer.phone_number') 
+ 
        
 
     .navigation__links
@@ -38,7 +31,11 @@ nav.navigation(:class="{'navigation--scrolled': $store.state.nav || menu}")
 
     .navigation__icon.navigation__icon--option(@click='menu = false')
       router-link(to='/')
-        Icon(name='logo-coo-options')        
+        Icon(name='logo-coo-options')
+      .navigation__phone
+        a(:href='propsFooter.props.acf.footer.phone_link')
+          Icon(name='Phone')
+          span(v-html='propsFooter.props.acf.footer.phone_number')                
 
     .navigation__menu(@click='menu ? menu = false : menu = true') MENU
 
