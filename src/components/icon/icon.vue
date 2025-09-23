@@ -10,3 +10,19 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.logo-coo-class {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 4px; 
+  padding: 4px;     
+  margin: 0 auto;
+}
+.logo-coo-footer-class {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 4px;
+  padding: 4px;     
+  margin: 0 auto;
+  width: fit-content 
+}
+</style>

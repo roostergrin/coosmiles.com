@@ -1,1 +1,4 @@
-.icon-container(v-html='svg')
+.icon-container(
+  v-html="svg"
+  :class="{'logo-coo-class': name === 'logo-coo', 'logo-coo-footer-class': name === 'FooterLogo'}"
+)
