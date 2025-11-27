@@ -4,6 +4,7 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="Qqot5NYv4vkvKJKYBjcFX8-8Vh0u3eIeN1gFqscgnZQ" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="preload" href="https://coosmiles.com/static/hero-home.jpg" as="image">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZB017QQR8B"></script>
@@ -84,5 +85,7 @@
 </script>
 
   <script id="rhinogram-embed" src="https://app.rhinogram.com/widget/embed.js?id=1c1b2900-ae4d-4e54-8a95-b9d74151c335"></script> 
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 </body>
 </html>

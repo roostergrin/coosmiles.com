@@ -4,6 +4,7 @@
 import Loader from 'components/loader/loader'
 import HeroPages from 'components/hero/hero-pages/hero-pages'
 import BlockIntro from 'components/block/block-intro/block-intro'
+import BlockFlyers from 'components/block/block-flyers/block-flyers'
 import TabsCommunityEvents from 'components/tabs/tabs-community-events/tabs-community-events'
 
 export default {
@@ -16,6 +17,7 @@ export default {
     Loader,
     HeroPages,
     BlockIntro,
+    BlockFlyers,
     TabsCommunityEvents
   }
 }
