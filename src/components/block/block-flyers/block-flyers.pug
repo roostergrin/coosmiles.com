@@ -1,15 +1,11 @@
 .block-flyers
+  .block-flyers__seperator(:class='{ "block-flyers__seperator--active": fadeLine}', v-waypoint="{ active: true, callback: onWaypointLine, options: intersectionLineOptions }")
+    .block-flyers__orange-line 
   .block-flyers__bg
-    .block-flyers__container
-      .block-flyers__title(v-html='props.title', :class='{ "block-flyers__title--active": fadeTitle}', v-waypoint="{ active: true, callback: onWaypointTitle, options: intersectionTitleOptions }") 
-        | Our
-        br 
-        span Programs
+    .block-flyers__container    
+      .block-flyers__title(v-html='props.title', :class='{ "block-flyers__title--active": fadeTitle}', v-waypoint="{ active: true, callback: onWaypointTitle, options: intersectionTitleOptions }")
     .block-flyers__container2        
       .block-flyers__content
         .block-flyers__contentlistouter
           a.block-flyers__contentlist(v-if='props.flyer_list' :href='Flyerimg.img' v-for='(Flyerimg, i) in props.flyer_list', :key='i'  data-fancybox="gallery")
-            img(:src='Flyerimg.img' alt='')
-
-      .block-flyers__seperator(:class='{ "block-flyers__seperator--active": fadeLine}', v-waypoint="{ active: true, callback: onWaypointLine, options: intersectionLineOptions }")
-        .block-flyers__orange-line      
+            img(:src='Flyerimg.img' alt='')     

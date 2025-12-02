@@ -3,6 +3,7 @@
 <script>
 import HeroPages from 'components/hero/hero-pages/hero-pages'
 import TabsTreatmentOptions from 'components/tabs/tabs-treatment-options/tabs-treatment-options'
+import BlockFlyers from 'components/block/block-flyers/block-flyers'
 
 export default {
   computed: {
@@ -12,7 +13,8 @@ export default {
   },
   components: {
     HeroPages,
-    TabsTreatmentOptions
+    TabsTreatmentOptions,
+    BlockFlyers
   }
 }
 </script>
