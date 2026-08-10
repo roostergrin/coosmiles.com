@@ -1,0 +1,64 @@
+.block-care
+  background: $c1
+
+  &__container
+    @extend .container-fluid
+    padding-top: rem-calc(80)
+    padding-bottom: rem-calc(80)
+
+    @media(max-width: 768px)
+      padding-top: rem-calc(60)
+      padding-bottom: rem-calc(60)
+
+  &__inner
+    display: grid
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr)
+    align-items: center
+    gap: rem-calc(64)
+
+    @media(max-width: 768px)
+      grid-template-columns: 1fr
+      gap: rem-calc(34)
+
+  &__image-wrap
+    overflow: hidden
+    border-radius: rem-calc(20)
+    box-shadow: 0 rem-calc(8) rem-calc(24) rgba($c11, .12)
+
+  &__image
+    display: block
+    width: 100%
+    aspect-ratio: 4 / 5
+    object-fit: cover
+
+  &__title
+    @extend .title
+    margin-bottom: rem-calc(28)
+    transform: translateY(10px)
+    transition: all .8s ease
+    opacity: 0
+
+    &--active
+      transform: translateY(0)
+      opacity: 1
+
+    @media(max-width: 768px)
+      text-align: center
+
+  &__content
+    margin-bottom: rem-calc(30)
+
+    p:last-child
+      margin-bottom: 0
+
+    a
+      color: $c4
+      text-decoration: underline
+
+  &__button
+    @extend .button
+    display: inline-block
+
+    @media(max-width: 768px)
+      display: block
+      text-align: center

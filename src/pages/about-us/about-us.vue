@@ -6,6 +6,7 @@ import HeroPages from 'components/hero/hero-pages/hero-pages'
 import TabsAboutDoctor from 'components/tabs/tabs-about-doctor/tabs-about-doctor'
 import TabsAboutTeam from 'components/tabs/tabs-about-team/tabs-about-team'
 import TabsAboutOffice from 'components/tabs/tabs-about-office/tabs-about-office'
+import BlockCare from 'components/block/block-care/block-care'
 
 export default {
   name: 'about-us',
@@ -22,7 +23,8 @@ export default {
     HeroPages,
     TabsAboutDoctor,
     TabsAboutTeam,
-    TabsAboutOffice
+    TabsAboutOffice,
+    BlockCare
   }
 }
 </script>

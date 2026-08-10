@@ -1,0 +1,9 @@
+.block-care
+  .block-care__container
+    .block-care__inner
+      .block-care__image-wrap
+        img.block-care__image(:src='props.image', :alt='props.image_alt || ""')
+      .block-care__copy
+        h2.block-care__title(v-html='props.title', :class='{ "block-care__title--active": fadeTitle}', v-waypoint="{ active: true, callback: onWaypointTitle, options: intersectionTitleOptions }")
+        .block-care__content(v-html='props.content')
+        a.block-care__button(v-if='props.button_text && props.button_link', :href='props.button_link') {{ props.button_text }}

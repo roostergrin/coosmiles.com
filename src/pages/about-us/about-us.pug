@@ -3,5 +3,6 @@
   div(v-if='props')
     HeroPages(:props='props.acf')
     TabsAboutDoctor(:props='props.acf.tabs_about_doctor')
+    BlockCare(v-if='props.acf.care_you_can_count_on' :props='props.acf.care_you_can_count_on')
     //- TabsAboutTeam(:props='props.acf.tabs_about_team')
     TabsAboutOffice(:props='props.acf.tabs_about_office')

@@ -1,5 +1,15 @@
 var path = require('path')
 
+var previewProxy = {}
+if (process.env.TICKET_PREVIEW_TARGET) {
+  previewProxy['/wp-json'] = {
+    target: process.env.TICKET_PREVIEW_TARGET,
+    changeOrigin: true,
+    secure: true,
+    auth: process.env.TICKET_PREVIEW_HTTP_AUTH
+  }
+}
+
 module.exports = {
   build: {
     env: require('./prod.env'),
@@ -23,10 +33,10 @@ module.exports = {
   dev: {
     env: require('./dev.env'),
     port: 8080,
-    autoOpenBrowser: true,
+    autoOpenBrowser: !process.env.TICKET_PREVIEW_TARGET,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: previewProxy,
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)
