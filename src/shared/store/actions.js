@@ -15,7 +15,7 @@ const actions = {
   GET_PAGES ({ commit }) {
     (async () => {
       try {
-        const response = await axios.get(`${api}/wp/v2/pages?per_page=100`)
+        const response = await axios.get(`${api}/wp/v2/pages?per_page=100&release=100305-20260810`)
         const data = response.data.reduce(
           (allData, data) => ({ ...allData, [data.slug]: data }),
           {}
