@@ -1,10 +1,16 @@
 <?php
 
 function load_scripts() {
-	wp_enqueue_script( 'main-manifest', get_template_directory_uri() . '/static/js/manifest.js', array(), '1.0.0', true );
-	wp_enqueue_script( 'main-vendor', get_template_directory_uri() . '/static/js/vendor.js', array(), '1.0.0', true );
-	wp_enqueue_script( 'main-scripts', get_template_directory_uri() . '/static/js/app.js', array(), '1.0.0', true );
-	wp_enqueue_style('main-styles', get_template_directory_uri() . '/static/css/app.css', array(), '1.0.0', 'all');
+	$theme_dir = get_template_directory();
+	$manifest_version = filemtime( $theme_dir . '/static/js/manifest.js' );
+	$vendor_version = filemtime( $theme_dir . '/static/js/vendor.js' );
+	$app_version = filemtime( $theme_dir . '/static/js/app.js' );
+	$style_version = filemtime( $theme_dir . '/static/css/app.css' );
+
+	wp_enqueue_script( 'main-manifest', get_template_directory_uri() . '/static/js/manifest.js', array(), $manifest_version, true );
+	wp_enqueue_script( 'main-vendor', get_template_directory_uri() . '/static/js/vendor.js', array(), $vendor_version, true );
+	wp_enqueue_script( 'main-scripts', get_template_directory_uri() . '/static/js/app.js', array(), $app_version, true );
+	wp_enqueue_style('main-styles', get_template_directory_uri() . '/static/css/app.css', array(), $style_version, 'all');
 
 	remove_action('wp_head', 'print_emoji_detection_script', 7);
 	remove_action('wp_print_styles', 'print_emoji_styles');
