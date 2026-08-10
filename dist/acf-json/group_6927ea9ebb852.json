@@ -86,6 +86,69 @@
               "allow_in_bindings": 0,
               "preview_size": "medium",
               "parent_repeater": "field_6927ea9ec14ce"
+            },
+            {
+              "key": "field_e5ff1582f6e99",
+              "label": "Program Title",
+              "name": "program_title",
+              "aria-label": "",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "",
+              "placeholder": "",
+              "prepend": "",
+              "append": "",
+              "maxlength": "",
+              "parent_repeater": "field_6927ea9ec14ce"
+            },
+            {
+              "key": "field_1fa929d32f436",
+              "label": "Content",
+              "name": "content",
+              "aria-label": "",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "",
+              "placeholder": "",
+              "maxlength": "",
+              "rows": 8,
+              "new_lines": "",
+              "parent_repeater": "field_6927ea9ec14ce"
+            },
+            {
+              "key": "field_aacfc1265b58a",
+              "label": "Image Alt Text",
+              "name": "image_alt",
+              "aria-label": "",
+              "type": "text",
+              "instructions": "Describe the image for visitors who use screen readers.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "",
+              "placeholder": "",
+              "prepend": "",
+              "append": "",
+              "maxlength": "",
+              "parent_repeater": "field_6927ea9ec14ce"
             }
           ]
         }
@@ -112,5 +175,6 @@
   "show_in_rest": 0,
   "display_title": "",
   "allow_ai_access": false,
-  "ai_description": ""
+  "ai_description": "",
+  "modified": 1785973364
 }
